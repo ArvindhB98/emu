@@ -472,7 +472,7 @@ $(document).ready(function () {
         });
     };
 
-    $('#companySearchList').on('input', function() {
+    $('.companySearchList').on('input', function() {
         const search = $(this).val();
         highlightMatches(search);
     });
