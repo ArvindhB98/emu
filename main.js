@@ -483,8 +483,8 @@ $(document).ready(function () {
                 // Highlight the text
                 const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
                 $(this).html(highlightedText);
-                // Add the parent div to the array
-                matchingDivs.push($(this).closest('div').detach()); // Adjust this selector to match your HTML structure
+                // Add the second closest div to the array
+                matchingDivs.push($(this).parents('div').eq(1).detach()); // Adjust this if needed
             } else {
                 // Reset non-matching items to their original state
                 $(this).html(text);
