@@ -386,7 +386,7 @@ $(document).ready(function () {
             $('.selectedSignList').append(htmlContent);
             $(`.deleteSelectedSign${signatory.name}`).on('click', function() {
                 let className = $(`.deleteSelectedSign${signatory.name}`).attr('class');
-        
+        alert("awdaw")
                     // Find the element with that class and get its 'data-name' attribute
                 let dataName = $(`.${className}`).attr('data-name');
                 removeItemByName(dataName,selectedSignatory,'selectedSignatory')
