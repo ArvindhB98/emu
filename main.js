@@ -473,11 +473,27 @@ $(document).ready(function () {
     };
     const highlightMatches2 = (search,searchListName) => {
         const regex = new RegExp(`(${search})`, 'gi'); // Create a case-insensitive regex
+        let matchingItems = [];
         $(`.${searchListName} div label div h5`).each(function() {
             const text = $(this).text();
-            const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
-            $(this).html(highlightedText);
+            if (regex.test(text)) {
+                // Highlight the text
+                const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
+                $(this).html(highlightedText);
+                // Add matching item to the array
+                matchingItems.push($(this).detach());
+            } else {
+                // If not matching, just clear the highlighted text
+                $(this).html(text);
+            }
         });
+                // Append matching items to the top of the list
+        $(`.${searchListName}`).prepend(matchingItems);
+        // $(`.${searchListName} div label div h5`).each(function() {
+        //     const text = $(this).text();
+        //     const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
+        //     $(this).html(highlightedText);
+        // });
     };
 
     $('.companySearchInput').on('input', function() {
