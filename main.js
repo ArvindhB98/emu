@@ -447,11 +447,9 @@ $(document).ready(function () {
         }
     });
     $('#deleteSelectedSign').on('click', function() {
-        alert('awd')
         removeItemByName($('#deleteSelectedSign').attr('data-name'))
     })
     function removeItemByName(name) {
-        alert("awd")
         const index = selectedSignatory.findIndex(item => item.name === name || "");
         if (index !== -1) {
             selectedSignatory.splice(index, 1);
