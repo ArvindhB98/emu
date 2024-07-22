@@ -491,12 +491,13 @@ $(document).ready(function () {
             }
         });
         $(`.${searchListName}`).prepend(matchingDivs);
-        $(`.${searchListName} div label div h5 p`).each(function() {
+        $(`.${searchListName} div label div p`).each(function() {
             const text = $(this).text();
             if (regex.test(text)) {
                 // Highlight the text
                 const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
                 $(this).html(highlightedText);
+
             } else {
                 // Reset non-matching items to their original state
                 $(this).html(text);
