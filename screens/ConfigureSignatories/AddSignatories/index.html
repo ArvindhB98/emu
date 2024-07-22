@@ -81,15 +81,15 @@
                     <label class="pb-2 text-uppercase" style="font-size: 12px;">Type</label>
                     <div class="d-flex justify-content-between">
                         <div class="d-flex gap-2 align-items-center my-auto">
-                            <input type="radio" id="option1" name="option" value="1">
+                            <input class="m-0" type="radio" id="option1" name="option" value="1">
                             <label for="option1">Corporate</label>
                         </div>
-                        <div class="d-flex gap-2">
-                            <input type="radio" id="option2" name="option" value="1">
+                        <div class="d-flex gap-2 align-items-center my-auto">
+                            <input class="m-0" type="radio" id="option2" name="option" value="1">
                             <label for="option2" >Individual</label>
                         </div>
-                        <div class="d-flex gap-2">
-                            <input type="radio" id="option3" name="option" value="1">
+                        <div class="d-flex gap-2 align-items-center my-auto">
+                            <input class="m-0" type="radio" id="option3" name="option" value="1">
                             <label for="option3" >Both</label>
                         </div>
                     </div>
@@ -97,16 +97,16 @@
                 <div class="col px-1 mt-3">
                     <label class="pb-2 text-uppercase" style="font-size: 12px;">Role</label>
                     <div class="col d-flex justify-content-between">
-                        <div class="d-flex gap-2">
-                            <input type="radio" id="option4" name="option2" value="1">
+                        <div class="d-flex gap-2 align-items-center my-auto">
+                            <input class="m-0" type="radio" id="option4" name="option2" value="1">
                             <label for="option4" >Signer</label>
                         </div>
-                        <div class="d-flex gap-2">
-                            <input type="radio" id="option5" name="option2" value="1">
+                        <div class="d-flex gap-2 align-items-center my-auto">
+                            <input class="m-0" type="radio" id="option5" name="option2" value="1">
                             <label for="option5" >Reviewer</label>
                         </div>
-                        <div class="d-flex gap-2">
-                            <input type="radio" id="option6" name="option2" value="1">
+                        <div class="d-flex gap-2 align-items-center my-auto">
+                            <input class="m-0" type="radio" id="option6" name="option2" value="1">
                             <label for="option6" >CC Recipient</label>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                 <div class="form-floating mb-4 mt-4">
                     <input type="search" readonly class="position-relative form-control delegate-form form-changes companySearchList" id="delegateCompany" style="color: black;"
                          placeholder=""/>
-                    <svg class="position-absolute dropDownArrow" width="17" height="12" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="position-absolute dropDownArrow companySearchArrow" width="17" height="12" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.25 7.11943L7 0.75L13.75 7.11943L12.5519 8.25L7 3.01115L1.44812 8.25L0.25 7.11943Z" fill="#1C1B1F"/>
                     </svg>
                     <label for="delegateCompany" class="delegate-form">Company</label>
@@ -161,15 +161,15 @@
                         Additional Information (Optional)
                     </button>
                     <ul class="dropdown-menu w-100 p-1 border-0" aria-labelledby="dropdownMenuButton">
-                        <li class="m-1"><select class="form-select"><option>Signature Type</option></select></li>
-                        <li class="m-1"><select class="form-select"><option>Authentication</option></select></li>
-                        <li class="m-1"><select class="form-select"><option>Additional Verification</option></select></li>
+                        <li class="m-1"><select class="form-select shadow-none"><option>Signature Type</option></select></li>
+                        <li class="m-1"><select class="form-select shadow-none"><option>Authentication</option></select></li>
+                        <li class="m-1"><select class="form-select shadow-none"><option>Additional Verification</option></select></li>
                     </ul>
                 </div>
                
                 <div class="col px-0">
                     <label class="pb-2 my-2 text-uppercase" style="font-size: 14px; color: #3B3B3B; font-weight: 400;">signatories</label>
-                    <div class="individual_selectedItems">
+                    <div class="individual_selectedItems d-flex flex-column gap-2">
 
                     </div>
                     <div class="col px-3 noSigns">
@@ -222,34 +222,34 @@
                         <div class="p-2 my-4" style="border: 1px solid #E0E0E0; border-radius: 8px;">
                             <div class="col px-1 ">
                                 <label class="pb-2 text-uppercase" style="font-size: 12px;">Type</label>
-                                <div class="col d-flex justify-content-between">
+                                <div class="col d-flex justify-content-between align-items-center my-auto">
                                     <div class="d-flex gap-2">
-                                        <input type="radio" id="option1" name="option" value="1">
+                                        <input class="m-0" type="radio" id="option1" name="option" value="1">
                                         <label for="option1" >Corporate</label>
                                     </div>
                                     <div class="d-flex gap-2">
-                                        <input type="radio" id="option2" name="option" value="1">
+                                        <input class="m-0" type="radio" id="option2" name="option" value="1">
                                         <label for="option2" >Individual</label>
                                     </div>
                                     <div class="d-flex gap-2">
-                                        <input type="radio" id="option3" name="option" value="1">
+                                        <input class="m-0" type="radio" id="option3" name="option" value="1">
                                         <label for="option3" >Both</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col px-1 mt-3">
                                 <label class="pb-2 text-uppercase" style="font-size: 12px;">Role</label>
-                                <div class="col d-flex justify-content-between">
+                                <div class="col d-flex justify-content-between align-items-center my-auto">
                                     <div class="d-flex gap-2">
-                                        <input type="radio" id="option4" name="option2" value="1">
+                                        <input class="m-0" type="radio" id="option4" name="option2" value="1">
                                         <label for="option4" >Signer</label>
                                     </div>
                                     <div class="d-flex gap-2">
-                                        <input type="radio" id="option5" name="option2" value="1">
+                                        <input class="m-0" type="radio" id="option5" name="option2" value="1">
                                         <label for="option5" >Reviewer</label>
                                     </div>
                                     <div class="d-flex gap-2">
-                                        <input type="radio" id="option6" name="option2" value="1">
+                                        <input class="m-0" type="radio" id="option6" name="option2" value="1">
                                         <label for="option6" >CC Recipient</label>
                                     </div>
                                 </div>
@@ -258,7 +258,7 @@
                                 <div class="form-floating mb-4 mt-4">
                                     <input type="search" readonly class="position-relative form-control delegate-form form-changes cg-companySearchList" id="delegateCompany" style="color: black;"
                                          placeholder=""/>
-                                    <svg class="position-absolute dropDownArrow" width="17" height="12" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="position-absolute dropDownArrow cg-companySearchArrow" width="17" height="12" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.25 7.11943L7 0.75L13.75 7.11943L12.5519 8.25L7 3.01115L1.44812 8.25L0.25 7.11943Z" fill="#1C1B1F"/>
                                     </svg>
                                     <label for="delegateCompany" class="delegate-form">Company</label>
@@ -307,9 +307,9 @@
                                      Additional Information (Optional)
                                  </button>
                                  <ul class="dropdown-menu w-100 p-1 border-0" aria-labelledby="dropdownMenuButton">
-                                     <li class="m-1"><select class="form-select p-2"><option>Signature Type</option></select></li>
-                                     <li class="m-1"><select class="form-select p-2"><option>Authentication</option></select></li>
-                                     <li class="m-1"><select class="form-select p-2"><option>Additional Verification</option></select></li>
+                                     <li class="m-1"><select class="form-select p-2 shadow-none"><option>Signature Type</option></select></li>
+                                     <li class="m-1"><select class="form-select p-2 shadow-none"><option>Authentication</option></select></li>
+                                     <li class="m-1"><select class="form-select p-2 shadow-none"><option>Additional Verification</option></select></li>
                                  </ul>
                             </div>
                             <div class="col px-1 cg-noSigns">
@@ -324,7 +324,7 @@
                             <div class="col px-0 cg-items">
                                 <div class="d-flex flex-column w-100">
                                     <label class="pb-2 my-2 text-uppercase" style="font-size: 12px;">signatories</label>
-                                    <div class="cg-selectedItems">
+                                    <div class="cg-selectedItems d-flex flex-column gap-2">
 
                                     </div>
                                 </div>
@@ -338,7 +338,7 @@
                                     <button type="button" class="btn btn-outline-secondary w-100 more-options-button"
                                         data-bs-toggle="modal" data-bs-target="#optionsModal">More Options</button>
                                 </div> -->
-                                <div class="col">
+                                <div class="col mx-auto">
                                     <div style="background-color: rgb(255, 255, 255);">
                                         <button class="createGroupModalBtn btn btn-primary w-100 sign-and-finish-button d-flex align-items-center justify-content-center custom-create"
                                     

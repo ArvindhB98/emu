@@ -660,7 +660,24 @@ select {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+#dropdownMenuButton{
 
+}
+#dropdownMenuButton:hover{
+    background-color: white;
+    color: #000000;
+}
+select{
+    border: 1px solid #F2F2F7;
+    box-shadow: none;
+}
+select:hover{
+    border: 1px solid #F2F2F7;
+    box-shadow: none;
+}
+input{
+    padding-bottom: 6px !important;
+}
 input[type="radio"] {
     display: flex;
     align-items: center;
@@ -675,15 +692,17 @@ input[type="radio"] {
 }
 textarea[type="text"] {
     box-shadow: unset !important;
-    border: 1px solid #454546;
+    border: 1px solid #F2F2F7;
     font-size: 16px;
     color: #000000;
+    
 }
 
 textarea[type="text"]:focus {
     box-shadow: unset !important;
-    border: 1px solid #454546;
+    border: 1px solid #225BBF;
     color: #000000;
+    background-color: unset !important;
 }
 
 textarea[type="text"]::selection {
@@ -691,15 +710,16 @@ textarea[type="text"]::selection {
 }
 input[type="text"] {
     box-shadow: unset !important;
-    border: 1px solid #454546;
+    border: 1px solid #F2F2F7;
     font-size: 16px;
     color: #000000;
 }
 
 input[type="text"]:focus {
     box-shadow: unset !important;
-    border: 1px solid #454546;
+    border: 1px solid #225BBF;
     color: #000000;
+    background-color: unset !important;
 }
 
 input[type="text"]::selection {
@@ -707,7 +727,7 @@ input[type="text"]::selection {
 }
 input[type="name"] {
     box-shadow: unset !important;
-    border: 1px solid #225BBF;
+    border: 1px solid #E0E0E0;
     font-size: 16px;
     color: #000000;
 }
@@ -716,6 +736,7 @@ input[type="name"]:focus {
     box-shadow: unset !important;
     border: 1px solid #225BBF;
     color: #000000;
+    background-color: unset !important;
 }
 
 input[type="name"]::selection {
@@ -724,7 +745,7 @@ input[type="name"]::selection {
 
 input[type="search"] {
     box-shadow: unset !important;
-    border: 1px solid #225BBF;
+    border: 1px solid #E0E0E0;
     font-size: 16px;
     color: #000000;
 }
@@ -733,6 +754,7 @@ input[type="search"]:focus {
     box-shadow: unset !important;
     border: 1px solid #225BBF;
     color: #000000;
+    background-color: unset !important;
 }
 
 input[type="search"]::selection {
@@ -960,7 +982,7 @@ input[type="checkbox"]:checked {
     display: flex;
     padding: 0px;
     top: 50%;
-    left: -85px;
+    left: -87px;
     transition: all 0.4s;
     transform: translate(0%, -50%);
     border-top-right-radius: 6px;
@@ -1071,6 +1093,10 @@ input[type="checkbox"]:checked {
     background-color: #225BBF;
     color: white;
     font-family: 'Gilroy Semibold';
+}
+.AddSignsBtn:hover{
+    background-color: #225BBF;
+    color: white;
 }
 .AddSignsBtn :disabled{
     height: 100px;

@@ -106,6 +106,12 @@ $(document).ready(function () {
     // $('.searchList').hide();
     $(document).on('click', '.companySearchList', function() {
         $('.companyNameList').toggle();
+        var $arrow = $('.companySearchArrow');
+            if ($arrow.css('transform') == 'none' || $arrow.css('transform') == 'matrix(1, 0, 0, 1, 0, 0)') {
+                $arrow.css('transform', 'rotate(180deg)');
+            } else {
+                $arrow.css('transform', 'rotate(0deg)');
+            }
     });
     $(document).on('click', '.listItem', function() {
         $('.companySearchList').val($(this).text());
@@ -134,6 +140,12 @@ $(document).ready(function () {
     // $('.searchList').hide();
     $(document).on('click', '.cg-companySearchList', function() {
         $('.cg-companyNameList').toggle();
+        var $arrow = $('.cg-companySearchArrow');
+            if ($arrow.css('transform') == 'none' || $arrow.css('transform') == 'matrix(1, 0, 0, 1, 0, 0)') {
+                $arrow.css('transform', 'rotate(180deg)');
+            } else {
+                $arrow.css('transform', 'rotate(0deg)');
+            }
     });
     $(document).on('click', '.listItem', function() {
         $('.cg-companySearchList').val($(this).text());
@@ -214,7 +226,19 @@ $(document).ready(function () {
     $(document).on('click', '.cg-signatoryListSearch', function() {
         $('.cg-signatoryDetails').toggle();
     });
-   
+    $(document).on('keydown', '.cg-signatoryListSearch', function(event) {
+        if (event.key === 'Enter') {
+            $('.cg-signatoryDetails').hide();
+            $(this).blur(); // Remove focus from the input field
+        }
+    });
+    $(document).on('keydown', '.signatoryListSearch', function(event) {
+        if (event.key === 'Enter') {
+            $('.signatoryDetails').hide();
+            $(this).blur(); // Remove focus from the input field
+        }
+    });
+    $('.cg-signatoryListSearch')
     let selectedItems = []
     
     $('.okay-btn').on('click', function () {
@@ -249,7 +273,7 @@ $(document).ready(function () {
     function updateSelectedItems() {
         // Clear the selected items list
         $('.cg-selectedItems').html('');
-        
+        $('.cg-signatoryListSearch').focus()
         // Generate and append the new list of selected items
         selectedItems.map(signatory => {
             var htmlContent = `
@@ -294,13 +318,14 @@ $(document).ready(function () {
     });
     
     function updateindividualSelectedItems() {
+        $('.signatoryListSearch').focus()
         // Clear the selected items list
         $('.individual_selectedItems').html('');
         
         // Generate and append the new list of selected items
         individual_selectedItems.map(signatory => {
             var htmlContent = `
-            <div class="d-flex w-100 justify-content-between align-items-center py-2" style="background-color: #F2F5FB;">
+            <div class="d-flex w-100 justify-content-between align-items-center py-2 rounded-2" style="background-color: #F2F5FB;">
                 <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
                     <img height="50px" width="50px" src="../../../assets/images/signatory profile.png" alt="pfp"/>
                     <div class="d-flex flex-column gap-0">
@@ -320,40 +345,48 @@ $(document).ready(function () {
     }
     let selectedSignatory = []
     selectedSignatory = JSON.parse(localStorage.getItem("selectedSignatory")) || []
-    selectedSignatory.map((signatory,index)=>{
-        let htmlContent = signatory.size ? `
-        <div class="d-flex w-100 justify-content-between align-items-center py-2  rounded-2 my-2" style="background-color: #F2F5FB;">
-            <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
-                <img height="50px" width="50px" src="../../assets/images/signatory profile.png" alt="pfp"/>
-                <div class="d-flex flex-column gap-0">
-                    <h5 style="font-size: 16px;">${signatory.name}</h5>
-                    <p style="line-height: 5px; color: #494949;">${signatory.size} participants</p>
-                    <p style="line-height: 5px; color: #494949; font-weight:bold;">Signer</p>
+    selectedSignatory = selectedSignatory.filter((signatory, index, self) =>
+        index === self.findIndex((t) => (
+           t.name === signatory.name
+        ))
+    );
+    function updateSelectedSignatoryList(){
+        selectedSignatory.map((signatory,index)=>{
+            let htmlContent = signatory.size ? `
+            <div class="d-flex w-100 justify-content-between align-items-center py-2  rounded-2 my-2" style="background-color: #F2F5FB;">
+                <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
+                    <img height="50px" width="50px" src="../../assets/images/signatory profile.png" alt="pfp"/>
+                    <div class="d-flex flex-column gap-0">
+                        <h5 style="font-size: 16px;">${signatory.name}</h5>
+                        <p style="line-height: 5px; color: #494949;">${signatory.size} participants</p>
+                        <p style="line-height: 5px; color: #494949; font-weight:bold;">Signer</p>
+                    </div>
+                </label>
+                <div class="px-2 d-flex gap-2">
+                    <img id="deleteSelectedSign" data-name=${signatory.name || ""} src="../../assets/vectors/Trash.svg"/>
+                    <img src="../../assets/vectors/menu.svg"/>
                 </div>
-            </label>
-            <div class="px-2 d-flex gap-2">
-                <img src="../../assets/vectors/Trash.svg"/>
-                <img src="../../assets/vectors/menu.svg"/>
             </div>
-        </div>
-        ` : `
-        <div class="d-flex w-100 justify-content-between align-items-center py-2  rounded-2 my-2" style="background-color: #F2F5FB;">
-            <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
-                <img height="50px" width="50px" src="../../assets/images/signatory profile.png" alt="pfp"/>
-                <div class="d-flex flex-column gap-0">
-                    <h5 style="font-size: 16px;">${signatory.name}</h5>
-                    <p style="line-height: 5px; color: #494949;">${signatory.mail}</p>
-                    <p style="line-height: 5px; color: #494949; font-weight:bold;">Signer</p>
+            ` : `
+            <div class="d-flex w-100 justify-content-between align-items-center py-2  rounded-2 my-2" style="background-color: #F2F5FB;">
+                <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
+                    <img height="50px" width="50px" src="../../assets/images/signatory profile.png" alt="pfp"/>
+                    <div class="d-flex flex-column gap-0">
+                        <h5 style="font-size: 16px;">${signatory.name}</h5>
+                        <p style="line-height: 5px; color: #494949;">${signatory.mail}</p>
+                        <p style="line-height: 5px; color: #494949; font-weight:bold;">Signer</p>
+                    </div>
+                </label>
+                <div class="px-2 d-flex gap-2">
+                    <img id="deleteSelectedSign" data-name=${signatory.name} src="../../assets/vectors/Trash.svg"/>
+                    <img src="../../assets/vectors/menu.svg"/>
                 </div>
-            </label>
-            <div class="px-2 d-flex gap-2">
-                <img src="../../assets/vectors/Trash.svg"/>
-                <img src="../../assets/vectors/menu.svg"/>
             </div>
-        </div>
-        `
-        $('.selectedSignList').append(htmlContent);
-    })
+            `
+            $('.selectedSignList').append(htmlContent);
+        })
+    }
+    updateSelectedSignatoryList()
     function AddSelectedSignatory(type){
         selectedSignatory = JSON.parse(localStorage.getItem("selectedSignatory")) || []
         if(type=="group"){
@@ -363,6 +396,7 @@ $(document).ready(function () {
             individual_selectedItems.forEach((item) => {
                 selectedSignatory?.push(item);
             });
+           
         }
         localStorage.setItem('selectedSignatory',JSON.stringify(selectedSignatory));
         console.log(selectedSignatory);
@@ -412,6 +446,19 @@ $(document).ready(function () {
             $('.ApplyEstampingBtn').prop('disabled', true);
         }
     });
+    $('#deleteSelectedSign').on('click', function() {
+        alert('awd')
+        removeItemByName($('#deleteSelectedSign').attr('data-name'))
+    })
+    function removeItemByName(name) {
+        alert("awd")
+        const index = selectedSignatory.findIndex(item => item.name === name || "");
+        if (index !== -1) {
+            selectedSignatory.splice(index, 1);
+        }
+        localStorage.setItem('selectedSignatory',JSON.stringify(selectedSignatory))
+        window.location.reload()
+    }
 });
 
 
