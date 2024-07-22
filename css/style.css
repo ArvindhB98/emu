@@ -188,7 +188,9 @@
 .modal-options .list-group-item:hover {
     background-color: #f8f9fa;
 }
-
+.modal-options .list-group-item2:hover {
+    background-color: #f8f9fa;
+}
 .modal-options .modal-header {
     border-bottom: none;
 }
