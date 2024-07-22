@@ -1132,7 +1132,9 @@ input:focus {
     box-shadow: none !important;
     border: 1px solid #225BBF !important;
 }
-
+textarea{
+    border: 1px solid #E0E0E0 !important;
+}
 textarea:focus {
     box-shadow: none !important;
     border: 2px solid #5D91ED
