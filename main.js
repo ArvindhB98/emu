@@ -390,7 +390,7 @@ $(document).ready(function () {
     function AddSelectedSignatory(type){
         selectedSignatory = JSON.parse(localStorage.getItem("selectedSignatory")) || []
         if(type=="group"){
-            selectedSignatory.push({name:groupName,size:selectedItems.length})
+            selectedSignatory.push({name:groupName ? groupName : "Test Group",size:selectedItems.length})
         }
         if(type=="individual"){
             individual_selectedItems.forEach((item) => {
