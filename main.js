@@ -482,6 +482,16 @@ $(document).ready(function () {
         console.log(search)
         highlightMatches(search,"cg-searchList");
     });
+    $('.signatoryListSearch').on('input', function() {
+        const search = $(this).val();
+        console.log(search)
+        highlightMatches(search,"signatoryList");
+    });
+    $('.cg-signatoryListSearch').on('input', function() {
+        const search = $(this).val();
+        console.log(search)
+        highlightMatches(search,"cg-signatoryList");
+    });
 });
 
 
