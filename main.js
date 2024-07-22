@@ -447,7 +447,11 @@ $(document).ready(function () {
         }
     });
     $('#deleteSelectedSign').on('click', function() {
-        removeItemByName($($('#deleteSelectedSign').attr('class')).attr('data-name'),selectedSignatory,'selectedSignatory')
+        let className = $('#deleteSelectedSign').attr('class');
+
+            // Find the element with that class and get its 'data-name' attribute
+        let dataName = $(`.${className}`).attr('data-name');
+        removeItemByName(dataName,selectedSignatory,'selectedSignatory')
     })
     function removeItemByName(name,arr,arrName) {
         alert(name)
