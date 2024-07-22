@@ -447,15 +447,15 @@ $(document).ready(function () {
         }
     });
     $('#deleteSelectedSign').on('click', function() {
-        removeItemByName($('#deleteSelectedSign').attr('data-name'))
+        removeItemByName($('#deleteSelectedSign').attr('data-name'),selectedSignatory)
     })
-    function removeItemByName(name) {
+    function removeItemByName(name,arr) {
         // alert(name)
-        const index = selectedSignatory.findIndex(item => item.name.replace(/\s+/g, '').toLowerCase() === name.toLowerCase());
+        const index = arr.findIndex(item => item.name.replace(/\s+/g, '').toLowerCase() === name.toLowerCase());
         if (index !== -1) {
-            selectedSignatory.splice(index, 1);
+            arr.splice(index, 1);
         }
-        localStorage.setItem('selectedSignatory',JSON.stringify(selectedSignatory))
+        localStorage.setItem('selectedSignatory',JSON.stringify(arr))
         window.location.reload()
     }
 });
