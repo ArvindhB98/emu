@@ -189,6 +189,7 @@
     background-color: #f8f9fa;
 }
 .modal-options .list-group-item2:hover {
+    cursor: pointer;
     background-color: #f8f9fa;
 }
 .modal-options .modal-header {
