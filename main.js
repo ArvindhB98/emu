@@ -471,6 +471,14 @@ $(document).ready(function () {
             $(this).html(highlightedText);
         });
     };
+    const highlightMatches2 = (search,searchListName) => {
+        const regex = new RegExp(`(${search})`, 'gi'); // Create a case-insensitive regex
+        $(`.${searchListName} div label div h5`).each(function() {
+            const text = $(this).text();
+            const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
+            $(this).html(highlightedText);
+        });
+    };
 
     $('.companySearchInput').on('input', function() {
         const search = $(this).val();
@@ -485,12 +493,12 @@ $(document).ready(function () {
     $('.signatoryListSearch').on('input', function() {
         const search = $(this).val();
         console.log(search)
-        highlightMatches(search,"signatoryList");
+        highlightMatches2(search,"signatoryList");
     });
     $('.cg-signatoryListSearch').on('input', function() {
         const search = $(this).val();
         console.log(search)
-        highlightMatches(search,"cg-signatoryList");
+        highlightMatches2(search,"cg-signatoryList");
     });
 });
 
