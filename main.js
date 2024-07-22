@@ -447,7 +447,7 @@ $(document).ready(function () {
         }
     });
     $('#deleteSelectedSign').on('click', function() {
-        removeItemByName($('#deleteSelectedSign').attr('class').attr('data-name'),selectedSignatory,'selectedSignatory')
+        removeItemByName($($('#deleteSelectedSign').attr('class')).attr('data-name'),selectedSignatory,'selectedSignatory')
     })
     function removeItemByName(name,arr,arrName) {
         // alert(name)
