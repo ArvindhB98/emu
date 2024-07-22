@@ -1008,6 +1008,27 @@ input[type="checkbox"]:checked {
     margin-right: 3px;
     overflow-y: auto;
 }
+/* Custom scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #88888800;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #55555500;
+}
+
+/* Custom scrollbar for Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #88888800 #f1f1f100;
+}
+
 .doc-sidepreview-btn{
     background-color: #323244;
     padding:8px 8px;
