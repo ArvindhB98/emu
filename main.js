@@ -477,7 +477,7 @@ $(document).ready(function () {
         let matchingDivs = [];
 
         // Iterate over each h5 element to check for matches
-        $(`.${searchListName} div label div h5`).each(function() {
+        $(`.${searchListName} div label div`).each(function() {
             const $firstH5 = $(this).find('h5').first();
             const $firstP = $(this).find('p').first();
             const text = $firstH5.text();
