@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Inter;
+    src: url("./assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    width: 313px;
+    height: 233px;
+    margin-top: 200px;
+    margin-left: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.img-fluid {
+    width: 70.98px;
+    height: 24px;
+}
+
+.documnet-desc {
+    margin-top: 12px;
+    margin-bottom: 36px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    width: 313px;
+    height: 98px;
+    color: #000000
+    ;
+}
+
+.prototype-btn{
+    font-family: Inter;
+    padding: 16px 24px;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: #FFFFFF;
+    background-color: #000000
+    ;
+}
+.modal.fade.right .modal-dialog {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    transition: transform 0.3s ease-out;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.modal.fade.show .modal-dialog {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}

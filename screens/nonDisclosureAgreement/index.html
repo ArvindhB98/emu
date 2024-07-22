@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non Disclosure Agreement</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header style="height: 48px;">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between w-100 px-1">
+                    <div class="d-flex align-items-center">
+                        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                            aria-expanded="false" aria-label="Toggle navigation" style="padding-right: 2px;">
+                            <img src="../../assets/vectors/menu.svg" alt="Menu">
+                        </button>
+                        <a class="navbar-brand mx-2" href="#">
+                            <img src="../../assets/images/emSignerLogo.png" class="img-fluid" alt="eMudhra Logo">
+                        </a>
+                    </div>
+                    <div class=" d-flex align-items-center justify-content-end gap-1">
+                        <img src="../../assets/vectors/UserCircle.svg" alt="login icon" class="login-icon">
+                        <p class="username mb-0">Tejas</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row align-items-center gap-1 mb-2" style="height: 52px;">
+                <a href="../../" class="col-1" style="padding-right: 0px; padding-left: 16px;">
+                    <img src="../../assets/vectors/arrow_back_ios.svg" alt="Back">
+                </a>
+                <div class="col" style="padding-left: 0px; padding-top: 2px;">
+                    <div class="dropdown" style="width: 100%;">
+                        <select class="form-select border-0 w-100" aria-label="Default select example">
+                            <option selected>NDA - Company Name</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center mb-2 search-field px-3">
+                <div class="col" style="padding-left: 0px;">
+                    <p class="mb-0 userFullName">Tejas Sarpotdar</p>
+                </div>
+                <div class="col-5 input-col text-end">
+                    <div class="input-group search-box">
+                        <img src="../../assets/vectors/search.svg" class="fa fa-search search-icon">
+                        <input type="text" class="form-control form-control-sm" placeholder="Go to page">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <img src="../../assets/images/nonDisclosureAgreement.svg" class="img-fluid" alt="NDA Document">
+                </div>
+            </div>
+            <div>
+                <button class="addSign" id="openAddSign">
+                    <img src="../../assets/images/addSign.svg">
+                </button>
+
+            </div>
+        </div>
+        <footer class="footer my-4" style="box-shadow: 0px -1px 12px 0px #00000014;">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary w-100 more-options-button"
+                            data-bs-toggle="modal" data-bs-target="#optionsModal">More Options</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-primary w-100 sign-and-finish-button"
+                            data-bs-toggle="modal" data-bs-target="#signatureModal">Sign & Finish</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signatureModal" tabindex="-1" aria-labelledby="signatureModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="../../assets/vectors/alertIcon.svg" class="modal-icon">
+                    <p class="modal-text-content">Tap the signature placeholder to<br> add your signature.</p>
+                    <button type="button" class="btn btn-primary col-12 okay-btn">Okay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More optionas modal -->
+    <div class="modal fade right modal-options" id="optionsModal" tabindex="-1" aria-labelledby="optionsModalLabel"
+        aria-hidden="true" style="margin-top: 48px;">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header options-header">
+                    <h5 class="modal-title" id="optionsModalLabel">More Options</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group list-group-flush">
+                        <div class="options-list" id="openRemarksModal">
+                            <img src="../../assets/vectors/block.svg" class="options-icon">
+                            <li class="list-group-item" style="color: #D91212;">Decline</li>
+                        </div>
+                        <div class="options-list" id="openDelegateModal">
+                            <img src="../../assets/vectors/approval_delegation.svg" class="options-icon">
+                            <li class="list-group-item">Delegate</li>
+                        </div>
+                        <div class="options-list">
+                            <img src="../../assets/vectors/download.svg" class="options-icon">
+                            <li class="list-group-item">Download Document</li>
+                        </div>
+                        <div class="options-list" id="openShareModal">
+                            <img src="../../assets/vectors/share.svg" class="options-icon">
+                            <li class="list-group-item">Share</li>
+                        </div>
+                        <div class="options-list" id="openCommentModal">
+                            <img src="../../assets/vectors/chat_bubble.svg" class="options-icon">
+                            <li class="list-group-item">Comments</li>
+                        </div>
+                        <div class="options-list">
+                            <img src="../../assets/vectors/draft.svg" class="options-icon">
+                            <li class="list-group-item">View Document</li>
+                        </div>
+                        <div class="options-list">
+                            <img src="../../assets/vectors/attach_file.svg" class="options-icon">
+                            <li class="list-group-item">View/Add Attachments</li>
+                        </div>
+                        <div class="options-list">
+                            <img src="../../assets/vectors/update.svg" class="options-icon">
+                            <li class="list-group-item">Doc Log</li>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Remarks Modal -->
+    <div class="modal fade right" id="remarksModal" tabindex="-1" aria-labelledby="remarksModalLabel" aria-hidden="true"
+        style="background-color: rgba(32, 32, 32, 0.479); padding-left: 20px; padding-right: 20px;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="remarksModalLabel">Are you sure you really want to decline?</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating">
+                        <textarea type="text" class="form-control decline-text" placeholder="Leave a remark here"
+                            id="remarksInput" style="height: 167px;"></textarea>
+                        <label class="remarksLabel" for="remarksInput">Remarks</label>
+                    </div>
+                    <small class="form-text text-muted d-flex justify-content-end mb-4  pe-2">Maximum 200 characters
+                        allowed</small>
+                    <div class="row mx-0">
+                        <button type="button" class="btn btn-secondary me-2 col" data-bs-dismiss="modal"
+                            style="height: 40px;">No,
+                            Cancel</button>
+                        <button type="button" class="btn btn-primary col" style="height: 40px;">Yes, Decline</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delegate Modal -->
+    <div class="modal fade right" id="delegateModal" tabindex="-1" aria-labelledby="delegateModalLabel"
+        aria-hidden="true" data-bs-backdrop="static" style="margin-top: 48px;">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delegateModalLabel" style="color: #000000;">Delegate to someone else
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control delegate-form form-changes" id="delegateName"
+                            placeholder="Name">
+                        <label for="delegateName" class="delegate-form">Name</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="email" class="form-control  delegate-form form-changes" id="delegateEmail"
+                            placeholder="Email">
+                        <label for="delegateEmail" class="delegate-form">Email</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <textarea type="text" class="form-control delegate-form form-changes" id="delegateReason"
+                            placeholder="Reason of Delegation" maxlength="200" style="height: 109px;"></textarea>
+                        <label for="delegateReason" class="delegate-form">Reason of Delegation</label>
+                        <small class="form-text text-muted d-flex justify-content-end">Maximum 200 characters
+                            allowed</small>
+                    </div>
+                    <div class="row">
+                        <div class="col delegateBtn px-0">
+                            <button type="button" class="btn btn-primary w-100">Delegate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share modal -->
+    <div class="modal fade right" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" style="margin-top: 48px;">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="shareModalLabel" style="color: #000000;">Share</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center border rounded p-3 gap-2"
+                            style="background-color:#F2F5FB;">
+                            <img src="../../assets/vectors/pdf.svg">
+                            <span class="doc-name">NDA - Company Name.pdf</span>
+                        </div>
+                    </div>
+                    <div class="form-floating">
+                        <input type="email" class="form-control  form-changes share-input" id="shareEmail"
+                            placeholder="Email">
+                        <label for="shareEmail" class="share-form" style="color: #4A4A4A !important;">Email</label>
+                    </div>
+                    <div class="mb-4 d-flex align-items-center gap-2">
+                        <img src="../../assets/vectors/tipIcon.svg">
+                        <small class="form-text text-muted mail-tooltip">Separate multiple email addresses with a
+                            semicolon</small>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control  form-changes share-message" id="shareMessage"
+                            placeholder="Message (optional)" maxlength="200"></textarea>
+                        <label for="shareMessage" class="share-form" style="color: #828282;">Message (optional)</label>
+                    </div>
+                    <div class="mb-4 mt-2">
+                        <small class="form-text text-muted d-flex justify-content-end message-limit">Maximum 200
+                            characters
+                            allowed</small>
+                    </div>
+                    <div class="form-check mb-4 d-flex align-items-center" style="gap: 11px;">
+                        <input class="form-check-input share-checkbox" type="checkbox" id="shareAttachments">
+                        <label class="form-check-label" for="shareAttachments">
+                            Share Attachments
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="col shareBtn px-0">
+                            <button type="button" class="btn btn-primary w-100">Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment Modal -->
+    <div class="modal fade right" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" style="margin-top: 48px;">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="commentModalLabel" style="color: #000000;">Comments</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-4">
+                        <textarea type="text" class="form-control comment-form form-changes" id="commentReason"
+                            placeholder="Add Comment" maxlength="200" style="height: 109px;"></textarea>
+                        <label for="commentReason" class="comment-form">Add Comment</label>
+                        <div class="mb-4 mt-2">
+                            <small class="form-text text-muted d-flex justify-content-end message-limit">Maximum 200
+                                characters
+                                allowed</small>
+                        </div>
+                    </div>
+                    <div class="comment-text"></div>
+                    <div class="form-control comment-default p-3" style="height: 109px;">
+                        <p class="comment-head">The document looks fine, i have reviewed</p>
+                        <p class="comment-person">Akhil</p>
+                        <span class="comment-date">Jun 19, 2024 | 12:34:26</span>
+                    </div>
+                    <div class="row">
+                        <div class="col commentBtn px-0">
+                            <button type="button" class="btn btn-primary w-100" id="postCommentBtn">Post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Sign Modal -->
+    <div class="modal fade right" id="addSignModal" tabindex="-1" aria-labelledby="addSignModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" style="margin-top: 48px;">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addSignModalLabel" style="color: #000000;">Add Signature</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <div class="mb-3 sign-form">
+                        <label for="modeOfSignature" class="form-label sign-label">Mode of signature</label>
+                        <select class="form-select p-0" id="modeOfSignature" style="border: none;">
+                            <option selected>eSignature</option>
+                            <option value="1">eSign V2</option>
+                            <option value="2">eSign V3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 sign-content">
+                        <label class="form-label appearance-label">VISUAL APPEARANCE</label>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="sample-signatures-tab" data-bs-toggle="tab"
+                                    data-bs-target="#sample-signatures" type="button" role="tab"
+                                    aria-controls="sample-signatures" aria-selected="true">Sample Signatures</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="draw-tab" data-bs-toggle="tab" data-bs-target="#draw"
+                                    type="button" role="tab" aria-controls="draw" aria-selected="false">Draw</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="upload-tab" data-bs-toggle="tab" data-bs-target="#upload"
+                                    type="button" role="tab" aria-controls="upload"
+                                    aria-selected="false">Upload</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="my-signature-tab" data-bs-toggle="tab"
+                                    data-bs-target="#my-signature" type="button" role="tab" aria-controls="my-signature"
+                                    aria-selected="false">My Signature</button>
+                            </li>
+                        </ul>
+
+                        <div class="form-floating mt-3">
+                            <input type="email" class="form-control  delegate-form form-changes" id="delegateEmail"
+                                placeholder="Signer Name" style="color: #2F2F2F">
+                            <label for="delegateEmail" class="delegate-form" style="color: #4A4A4A;">Signer Name</label>
+                        </div>
+                        <div class="mb-2  d-flex align-items-center gap-2">
+                            <img src="../../assets/vectors/tipIcon.svg">
+                            <small class="form-text text-muted d-flex justify-content-start sign-limit">Maximum 30
+                                characters</small>
+                        </div>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="sample-signatures" role="tabpanel"
+                                aria-labelledby="sample-signatures-tab">
+                                <div class="form-check sign-form  mt-3">
+                                    <label class="sign-label">Signature 1</label>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <input class="form-check-input radio-input" type="radio" name="signature"
+                                            id="signature1" style="padding-left: 0px;">
+                                        <label class="form-check-label " for="signature1">
+                                            <img src="../../assets/images/sign1.svg" alt="Signature 1">
+
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-check sign-form  mt-3">
+                                    <label class="sign-label">Signature 2</label>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <input class="form-check-input radio-input" type="radio" name="signature"
+                                            id="signature2" style="padding-left: 0px;">
+                                        <label class="form-check-label" for="signature2">
+                                            <img src="../../assets/images/sign2.svg" alt="Signature 2">
+
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-check sign-form  mt-3 signatureThree">
+                                    <label class="sign-label">Signature 3</label>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <input class="form-check-input radio-input" type="radio" name="signature"
+                                            id="signature3" style="padding-left: 0px;">
+                                        <label class="form-check-label" for="signature3">
+                                            <img src="../../assets/images/sign3.svg" alt="Signature 3">
+
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-check sign-form  mt-3">
+                                    <label class="sign-label">Signature 4</label>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <input class="form-check-input radio-input" type="radio" name="signature"
+                                            id="signature1" style="padding-left: 0px;">
+                                        <label class="form-check-label " for="signature1">
+                                            <img src="../../assets/images/sign1.svg" alt="Signature 4">
+
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row addSignBtn">
+                        <button type="button" class="btn btn-secondary me-2 col resetBtn" data-bs-dismiss="modal"
+                            style="border-radius: 4px;">Reset</button>
+                        <button type="button" class="btn btn-primary col "
+                            style="height: 48px; border-radius: 4px;">Apply & Preview</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../main.js"></script>
+</body>
+
+</html>
