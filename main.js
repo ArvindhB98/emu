@@ -452,10 +452,8 @@ $(document).ready(function () {
     function removeItemByName(name,arr,arrName) {
         // alert(name)
         const index = arr.findIndex(item => item.name.replace(/\s+/g, '').toLowerCase() === name.toLowerCase());
-        if (index !== -1) {
-            arr.splice(index, 1);
+        arr.splice(index, 1);
             alert(index)
-        }
         localStorage.setItem(arrName,JSON.stringify(arr))
         window.location.reload()
     }
