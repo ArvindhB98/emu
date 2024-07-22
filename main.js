@@ -450,12 +450,10 @@ $(document).ready(function () {
         removeItemByName($('#deleteSelectedSign').attr('data-name'))
     })
     function removeItemByName(name) {
+        alert(name)
         const index = selectedSignatory.findIndex(item => item.name.toLowerCase() === name.toLowerCase());
         if (index !== -1) {
             selectedSignatory.splice(index, 1);
-        }
-        if(selectedSignatory.length==0){
-            selectedSignatory=[]
         }
         localStorage.setItem('selectedSignatory',JSON.stringify(selectedSignatory))
         window.location.reload()
