@@ -451,7 +451,7 @@ $(document).ready(function () {
     })
     function removeItemByName(name) {
         alert(name)
-        const index = selectedSignatory.findIndex(item => item.name.toLowerCase() === name.toLowerCase());
+        const index = selectedSignatory.findIndex(item => item.name.replace(/\s+/g, '').toLowerCase() === name.toLowerCase());
         if (index !== -1) {
             selectedSignatory.splice(index, 1);
         }
