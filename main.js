@@ -454,6 +454,7 @@ $(document).ready(function () {
         const index = arr.findIndex(item => item.name.replace(/\s+/g, '').toLowerCase() === name.toLowerCase());
         if (index !== -1) {
             arr.splice(index, 1);
+            alert(index)
         }
         localStorage.setItem(arrName,JSON.stringify(arr))
         window.location.reload()
