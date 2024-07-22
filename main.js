@@ -477,46 +477,33 @@ $(document).ready(function () {
         let matchingDivs = [];
 
         // Iterate over each h5 element to check for matches
-        $(`.${searchListName} div label div`).each(function() {
-            const $firstH5 = $(this).find('h5').first();
-            const $firstP = $(this).find('p').first();
-            const text = $firstH5.text();
-            const text2 =  $firstP.text();
+        $(`.${searchListName} div label div h5`).each(function() {
+            const text = $(this).text();
             if (regex.test(text)) {
                 // Highlight the text
                 const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
-                $firstH5.html(highlightedText);
+                $(this).html(highlightedText);
                 // Add the second closest div to the array
-                matchingDivs.push( $firstH5.parents('div').eq(1).detach()); // Adjust this if needed
+                matchingDivs.push($(this).parents('div').eq(1).detach()); // Adjust this if needed
             } else {
                 // Reset non-matching items to their original state
-                $firstH5.html(text);
-            }
-            if (regex.test(text2)) {
-                // Highlight the text
-                const highlightedText = text2.replace(regex, '<span class="highlight-SearchText">$1</span>');
-                $firstP.html(highlightedText);
-                // Add the second closest div to the array
-                matchingDivs.push($firstP.parents('div').eq(1).detach()); // Adjust this if needed
-            } else {
-                // Reset non-matching items to their original state
-                $firstP.html(text2);
+                $(this).html(text);
             }
         });
         $(`.${searchListName}`).prepend(matchingDivs);
-        // $(`.${searchListName} div label div`).each(function() {
-        //     const $firstP = $(this).find('p').first();
-        //     const text = $firstP.text();
-        //     if (regex.test(text)) {
-        //         // Highlight the text
-        //         const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
-        //         $(this).html(highlightedText);
+        $(`.${searchListName} div label div`).each(function() {
+            const $firstP = $(this).find('p').first();
+            const text = $firstP.text();
+            if (regex.test(text)) {
+                // Highlight the text
+                const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
+                $firstP.html(highlightedText);
 
-        //     } else {
-        //         // Reset non-matching items to their original state
-        //         $(this).html(text);
-        //     }
-        // });
+            } else {
+                // Reset non-matching items to their original state
+                $firstP.html(text);
+            }
+        });
     };
 
     $('.companySearchInput').on('input', function() {
