@@ -450,7 +450,7 @@ $(document).ready(function () {
         removeItemByName($('#deleteSelectedSign').attr('data-name'))
     })
     function removeItemByName(name) {
-        alert(name)
+        // alert(name)
         const index = selectedSignatory.findIndex(item => item.name.replace(/\s+/g, '').toLowerCase() === name.toLowerCase());
         if (index !== -1) {
             selectedSignatory.splice(index, 1);
