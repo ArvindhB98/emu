@@ -473,22 +473,26 @@ $(document).ready(function () {
     };
     const highlightMatches2 = (search,searchListName) => {
         const regex = new RegExp(`(${search})`, 'gi'); // Create a case-insensitive regex
-        let matchingItems = [];
+        
+        let matchingDivs = [];
+
+        // Iterate over each h5 element to check for matches
         $(`.${searchListName} div label div h5`).each(function() {
             const text = $(this).text();
             if (regex.test(text)) {
                 // Highlight the text
                 const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
                 $(this).html(highlightedText);
-                // Add matching item to the array
-                matchingItems.push($(this).detach());
+                // Add the parent div to the array
+                matchingDivs.push($(this).closest('div').detach()); // Adjust this selector to match your HTML structure
             } else {
-                // If not matching, just clear the highlighted text
+                // Reset non-matching items to their original state
                 $(this).html(text);
             }
         });
-                // Append matching items to the top of the list
-        $(`.${searchListName}`).prepend(matchingItems);
+
+        // Append matching divs to the top of the list
+        $(`.${searchListName}`).prepend(matchingDivs);
         // $(`.${searchListName} div label div h5`).each(function() {
         //     const text = $(this).text();
         //     const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
