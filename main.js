@@ -363,7 +363,7 @@ $(document).ready(function () {
                     </div>
                 </label>
                 <div class="px-2 d-flex gap-2">
-                    <img id="deleteSelectedSign" class="deleteSelectedSign${signatory.name}" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
+                    <img id="deleteSelectedSign" class="deleteSelectedSign${signatory.name.replace(/\s+/g, '')}" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
                     <img src="../../assets/vectors/menu.svg"/>
                 </div>
             </div>
@@ -378,14 +378,14 @@ $(document).ready(function () {
                     </div>
                 </label>
                 <div class="px-2 d-flex gap-2">
-                    <img id="deleteSelectedSign" class="deleteSelectedSign${signatory.name}" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
+                    <img id="deleteSelectedSign" class="deleteSelectedSign${signatory.name.replace(/\s+/g, '')}" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
                     <img src="../../assets/vectors/menu.svg"/>
                 </div>
             </div>
             `
             $('.selectedSignList').append(htmlContent);
-            $(`.deleteSelectedSign${signatory.name.replace(/\s+/g, '')}`).on('click', function() {
-                let className = $(`.deleteSelectedSign${signatory.name.replace(/\s+/g, '')}`).attr('class');
+            $(`.deleteSelectedSign${signatory.name}`).on('click', function() {
+                let className = $(`.deleteSelectedSign${signatory.name}`).attr('class');
         
                     // Find the element with that class and get its 'data-name' attribute
                 let dataName = $(`.${className}`).attr('data-name');
