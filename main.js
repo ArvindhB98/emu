@@ -490,14 +490,18 @@ $(document).ready(function () {
                 $(this).html(text);
             }
         });
-
-        // Append matching divs to the top of the list
         $(`.${searchListName}`).prepend(matchingDivs);
-        // $(`.${searchListName} div label div h5`).each(function() {
-        //     const text = $(this).text();
-        //     const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
-        //     $(this).html(highlightedText);
-        // });
+        $(`.${searchListName} div label div h5 p`).each(function() {
+            const text = $(this).text();
+            if (regex.test(text)) {
+                // Highlight the text
+                const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
+                $(this).html(highlightedText);
+            } else {
+                // Reset non-matching items to their original state
+                $(this).html(text);
+            }
+        });
     };
 
     $('.companySearchInput').on('input', function() {
