@@ -463,6 +463,19 @@ $(document).ready(function () {
         localStorage.setItem(arrName,JSON.stringify(arr))
         window.location.reload()
     }
+    const highlightMatches = (search) => {
+        const regex = new RegExp(`(${search})`, 'gi'); // Create a case-insensitive regex
+        $('.searchList div').each(function() {
+            const text = $(this).text();
+            const highlightedText = text.replace(regex, '<span class="highlight">$1</span>');
+            $(this).html(highlightedText);
+        });
+    };
+
+    $('#companySearchList').on('input', function() {
+        const search = $(this).val();
+        highlightMatches(search);
+    });
 });
 
 
