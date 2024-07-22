@@ -1126,7 +1126,7 @@ input[type="checkbox"]:checked {
 }
 /* ////////////////////// */
 input{
-    border: 1px solid #E0E0E0;
+    border: 1px solid #E0E0E0 !important;
 }
 input:focus {
     box-shadow: none !important;
