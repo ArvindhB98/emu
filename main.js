@@ -363,7 +363,7 @@ $(document).ready(function () {
                     </div>
                 </label>
                 <div class="px-2 d-flex gap-2">
-                    <img id="deleteSelectedSign" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
+                    <img id="deleteSelectedSign" class="deleteSelectedSign${signatory.name}" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
                     <img src="../../assets/vectors/menu.svg"/>
                 </div>
             </div>
@@ -378,7 +378,7 @@ $(document).ready(function () {
                     </div>
                 </label>
                 <div class="px-2 d-flex gap-2">
-                    <img id="deleteSelectedSign" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
+                    <img id="deleteSelectedSign" class="deleteSelectedSign${signatory.name}" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
                     <img src="../../assets/vectors/menu.svg"/>
                 </div>
             </div>
@@ -447,7 +447,7 @@ $(document).ready(function () {
         }
     });
     $('#deleteSelectedSign').on('click', function() {
-        removeItemByName($('#deleteSelectedSign').attr('data-name'),selectedSignatory,'selectedSignatory')
+        removeItemByName($('#deleteSelectedSign').attr('class').attr('data-name'),selectedSignatory,'selectedSignatory')
     })
     function removeItemByName(name,arr,arrName) {
         // alert(name)
