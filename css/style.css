@@ -1102,3 +1102,135 @@ input[type="checkbox"]:checked {
     height: 100px;
     border:none
 }
+/* ////////////////////// */
+input:focus {
+    box-shadow: none !important;
+    border: 1px solid #225BBF !important;
+}
+
+textarea:focus {
+    box-shadow: none !important;
+    border: 2px solid #5D91ED
+}
+
+#remarksModal {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn-close {
+    box-shadow: none !important;
+}
+
+#signatureModal {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#page-nav:focus {
+    box-shadow: none !important;
+    border: none !important;
+    background-color: transparent;
+}
+
+select:focus {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.radio-item {
+    display: inline-block;
+    position: relative;
+    padding: 0 6px;
+    margin: 10px 0 0;
+}
+
+.radio-item input[type='radio'] {
+    display: none;
+}
+
+.radio-item label {
+    color: #666;
+    font-weight: normal;
+}
+
+.radio-item label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    border: 1px solid #000000;
+    background-color: transparent;
+}
+
+.radio-item input[type='radio']:checked+label:before {
+    border: 2px solid #225BBF;
+    /* Change the border color when checked */
+}
+
+
+.radio-item input[type=radio]:checked+label:after {
+    border-radius: 11px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    content: " ";
+    display: block;
+    background: #225BBF;
+    border: 1px solid #225BBF !important;
+}
+
+#nameSuggestions {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 12px 0px #00000029;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    font-family: GilroyMedium;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.98px;
+
+
+}
+
+#nameSuggestions .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#nameSuggestions .dropdown-item:hover {
+    background-color: #FFFFFF;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #000000;
+}
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    background-color: transparent;
+    border: none;
+    color: #2F2F2F;
+}
+
+footer {
+    box-shadow: 0px -1px 12px 0px #00000014;
+    background-color: #FFFFFF;
+    padding: 20px 0px;
+}

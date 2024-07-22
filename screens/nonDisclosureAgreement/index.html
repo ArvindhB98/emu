@@ -8,6 +8,623 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="../../css/style.css" rel="stylesheet">
+    <!-- <style>
+        @font-face {
+    font-family: Inter;
+    src: url("../../assets/fonts/Inter/static/Inter-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: InterRegular;
+    src: url("../../assets/fonts/Inter/static/Inter-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GilroyRegular;
+    src: url("../../assets/fonts/gilroy-regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Gilroy Semibold;
+    src: url("../../assets/fonts/Gilroy-SemiBold.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GilroyMedium;
+    src: url("../assets/fonts/gilroy-medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.custom-toggler {
+    border: none;
+    padding-left: 0px;
+    padding-right: 8px;
+}
+
+.username {
+    margin-bottom: 0px;
+    font-family: GilroyMedium;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    color: #000000;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    color: #2F2F2F;
+    gap: 6px;
+    font-family: Gilroy Semibold;
+    padding-left: 0px;
+}
+
+.dropdown-item.active {
+    background-color: transparent;
+}
+
+
+
+.btn.show {
+    background-color: transparent;
+    border: none;
+    color: #2F2F2F;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: none;
+    color: #2F2F2F;
+}
+
+.input-col {
+    color: #7D7D7D;
+
+}
+
+.search-box {
+    width: 130px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2F2F2F29;
+    border-radius: 4px;
+}
+
+.form-control {
+    border: none;
+    background-color: #F2F2F7;
+    font-family: GilroyMedium;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.98px;
+    color: #7D7D7D;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.search-field {
+    background-color: #F2F2F7;
+    height: 56px;
+}
+
+.userFullName {
+    font-family: GilroyMedium;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sign-and-finish-button {
+    background: #225BBF;
+    height: 48px;
+    font-family: Gilroy SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.6px;
+}
+
+.more-options-button {
+    height: 48px;
+    font-family: Gilroy SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.6px;
+    border: 1px solid #2F2F2F !important;
+    color: #2F2F2F;
+
+}
+
+.okay-btn {
+    background: #225BBF;
+    margin-bottom: 10px;
+}
+
+.search-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.modal-text-content {
+    font-family: GilroyMedium;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #2F2F2F;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+.modal-icon {
+    margin-top: 20px;
+}
+
+.modal-options .modal-body {
+    padding: 0;
+}
+
+.modal-options .list-group-item {
+    padding: 1rem 1.5rem;
+}
+
+.modal-options .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.modal-options .modal-header {
+    border-bottom: none;
+}
+
+.modal-options .modal-footer {
+    border-top: none;
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+.list-group-item {
+    border: none;
+    font-family: GilroyMedium;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.98px;
+    color: #000000;
+}
+
+.options-list {
+    display: flex;
+    align-items: center;
+    border: 1px solid #00000014;
+    border-radius: 4PX;
+    margin: 6px 20px;
+}
+
+.options-header {
+    font-family: Gilroy Semibold;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #000000;
+    padding-bottom: 2px;
+
+}
+
+.options-icon {
+    padding-left: 16px;
+}
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label {
+    opacity: 1;
+    transform: scale(0.85) translateY(-2rem);
+    color: #828282;
+}
+
+.form-floating>.form-control:focus,
+.form-floating>.form-control:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: .675rem;
+}
+
+#remarksModal .modal-title {
+    font-family: GilroyMedium;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #2F2F2F;
+}
+
+#remarksModal .remarksLabel {
+    font-family: GilroyMedium;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.41px;
+}
+
+.form-text {
+    font-family: GilroyMedium;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    color: #828282;
+}
+
+#remarksModal .btn {
+    font-family: Gilroy SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.6px;
+}
+
+#remarksModal .btn-secondary {
+    color: #2F2F2F;
+    background-color: transparent;
+    border: 1px solid #2F2F2F
+}
+
+#remarksModal .btn-primary {
+    color: #FFFFFF;
+    background: #225BBF;
+
+}
+
+.delegateBtn,
+.shareBtn,
+.commentBtn,
+.addSignBtn {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    width: calc(100% - 32px);
+}
+
+.addSignBtn {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    width: calc(100% - 16px);
+}
+
+#delegateModal .modal-title {
+    font-family: Gilroy SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #000000;
+
+}
+
+.delegate-form {
+    border: 1px solid #E0E0E0;
+    font-family: GilroyMedium;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.41px;
+    color: #828282;
+    background-color: transparent;
+    padding-top: 4px;
+
+}
+
+.form-changes {
+    padding-top: 4px !important;
+}
+
+#delegateModal .btn,
+#shareModal .btn,
+#commentModal .btn,
+#addSignModal .btn{
+    background-color: #225BBF;
+    border-radius: 2px;
+    font-family: Gilroy SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #FFFFFF;
+    padding: 12px 20px;
+}
+
+#addSignModal .btn {
+    padding: 8px 12px;
+}
+
+.doc-name {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    color: #000000;
+}
+
+#shareModal .modal-title {
+    font-family: Gilroy SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #000000;
+}
+
+.share-input {
+    background-color: transparent;
+    border: 1px solid #E0E0E0;
+    padding: 15px 12px !important;
+}
+
+.share-form {
+    font-family: GilroyMedium;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.56px;
+    color: #4A4A4A;
+}
+
+.mail-tooltip {
+    font-family: GilroyRegular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #828282;
+}
+
+.share-message {
+    height: 109px !important;
+    color: #828282 !important;
+    background-color: transparent;
+    border: 1px solid #E0E0E0;
+}
+
+.message-limit {
+    font-family: InterRegular;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    color: #828282 !important;
+}
+
+.form-check-input {
+    border-color: #000000;
+    border-radius: 1px !important;
+    margin-bottom: 2px;
+}
+
+.form-check-input:checked {
+    background-color: #225BBF;
+}
+
+.form-check-label {
+    font-family: GilroyMedium;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.98px;
+    color: #000000;
+}
+
+/* .form-check-input:checked[type=checkbox]{
+background-image: url("/assets/vectors/tick.svg");
+} */
+
+#commentModal .modal-title {
+    font-family: Gilroy SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #000000;
+}
+
+.comment-form {
+    font-family: GilroyMedium;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.41px;
+    color: #828282;
+    background-color: transparent;
+    border: 1px solid #E0E0E0;
+}
+
+.comment-text {
+    display: none;
+}
+
+.comment-default {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #00000014;
+    color: #000000 !important;
+    padding-top: 0px;
+}
+
+.comment-default::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    left: 0;
+    width: 4px;
+    background-color: #FBBE8E;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.comment-list ::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    left: 0;
+    width: 4px;
+    background-color: #9EA0FF;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.edit-link,
+.delete-link {
+    background-color: transparent;
+    border: 0px;
+    padding-left: 0px;
+    font-family: GilroyMedium;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.edit-link {
+    color: #225BBF;
+}
+
+.delete-link {
+    color: #D91212;
+}
+
+.comment-head {
+    font-family: GilroyMedium;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1C1C1E;
+    margin-bottom: 12px;
+}
+
+.comment-person {
+    font-family: Gilroy SemiBold;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1C1C1EE5;
+    margin-bottom: 6px;
+}
+
+.comment-date,
+.user-comment {
+    font-family: GilroyRegular;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1C1C1EB2;
+    margin-bottom: 12px;
+}
+
+.addSign {
+    position: absolute;
+    bottom: 180px;
+    right: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+.nav-tabs {
+    overflow-y: hidden;
+    display: flex;
+    flex-flow: row;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    border: none;
+    border-width: 0px;
+    scrollbar-width: none;
+}
+
+.sign-content {
+    border: 1px solid #E0E0E0;
+    padding: 16px 12px 0px 12px;
+    border-radius: 0.375rem;
+}
+
+.nav-tabs .nav-link {
+    font-family: GilroyMedium;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-secondary, #00000099);
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.nav-tabs .nav-link.active {
+    border-color: transparent;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 0px;
+    color: #000000;
+}
+
+.sign-form {
+    border: 1px solid #E0E0E0;
+    position: relative;
+    padding: 15px 12px;
+    border-radius: 8px;
+}
+
+.sign-label {
+    position: absolute;
+    top: -10px;
+    left: 11px;
+    background-color: white;
+    font-family: GilroyMedium;
+    font-size: 12px;
+    font-weight: 400;
+    color: #4A4A4A;
+}
+
+.radio-input {
+    margin-left: 0px !important;
+    border-radius: 50% !important;
+}
+
+#addSignModal .modal-title {
+    font-family: Gilroy SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #2F2F2F;
+
+}
+
+#addSignModal .modal-header {
+    border-bottom: none;
+}
+
+.appearance-label {
+    font-family: GilroyMedium;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.98px;
+    text-align: left;
+    color: #3B3B3B;
+}
+
+option, select {
+    font-family: GilroyMedium;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2F2F2F;
+}
+
+.sign-limit{
+    font-family: GilroyRegular;
+font-size: 12px;
+font-weight: 400;
+line-height: 14.4px;
+color: #828282;
+padding-bottom: 5px;
+}
+
+.signatureThree{
+    border-bottom: none;
+     border-bottom-right-radius: 0px; 
+     border-bottom-left-radius: 0px;
+      margin-bottom: 0px;
+}
+    </style> -->
 </head>
 
 <body>
@@ -39,16 +656,25 @@
                 <a href="../../" class="col-1" style="padding-right: 0px; padding-left: 16px;">
                     <img src="../../assets/vectors/arrow_back_ios.svg" alt="Back">
                 </a>
-                <div class="col" style="padding-left: 0px; padding-top: 2px;">
-                    <div class="dropdown" style="width: 100%;">
-                        <select class="form-select border-0 w-100" aria-label="Default select example">
-                            <option selected>NDA - Company Name</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                <div class="col d-flex justify-content-between align-items-center"
+                    style="padding-left: 0px; padding-top: 2px;">
+                    <div class="dropdown w-100">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            NDA - Company Name
+                        </button>
+                        <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#" data-value="NDA - Company Name">NDA - Company Name</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" data-value="Option 1">Option 1</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Option 2">Option 2</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Option 3">Option 3</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Option 4">Option 4</a></li>
+                        </ul>
                     </div>
                 </div>
+
+
             </div>
             <div class="row align-items-center mb-2 search-field px-3">
                 <div class="col" style="padding-left: 0px;">
@@ -57,7 +683,7 @@
                 <div class="col-5 input-col text-end">
                     <div class="input-group search-box">
                         <img src="../../assets/vectors/search.svg" class="fa fa-search search-icon">
-                        <input type="text" class="form-control form-control-sm border-0 shadow-none" placeholder="Go to page">
+                        <input type="text" class="form-control form-control-sm" id="page-nav" placeholder="Go to page">
                     </div>
                 </div>
             </div>
@@ -73,7 +699,7 @@
 
             </div>
         </div>
-        <footer class="footer my-4" style="box-shadow: 0px -1px 12px 0px #00000014;">
+        <footer class="footer ">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -96,7 +722,8 @@
                 <div class="modal-body text-center">
                     <img src="../../assets/vectors/alertIcon.svg" class="modal-icon">
                     <p class="modal-text-content">Tap the signature placeholder to<br> add your signature.</p>
-                    <button type="button" class="btn btn-primary col-12 okay-btn">Okay</button>
+                    <button type="button"
+                        class="btn btn-primary col-12 okay-btn d-flex align-items-center justify-content-center">Okay</button>
                 </div>
             </div>
         </div>
@@ -154,7 +781,7 @@
 
     <!-- Remarks Modal -->
     <div class="modal fade right" id="remarksModal" tabindex="-1" aria-labelledby="remarksModalLabel" aria-hidden="true"
-        style="background-color: rgba(32, 32, 32, 0.479); padding-left: 20px; padding-right: 20px;">
+        style="background-color: rgba(32, 32, 32, 0.479);">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -168,11 +795,12 @@
                     </div>
                     <small class="form-text text-muted d-flex justify-content-end mb-4  pe-2">Maximum 200 characters
                         allowed</small>
-                    <div class="row mx-0">
+                    <div class="row mx-0" style="margin-right: 0px; gap: 12px;">
                         <button type="button" class="btn btn-secondary me-2 col" data-bs-dismiss="modal"
-                            style="height: 40px;">No,
+                            style="height: 40px; padding-top: 10px; padding-bottom: 10px;">No,
                             Cancel</button>
-                        <button type="button" class="btn btn-primary col" style="height: 40px;">Yes, Decline</button>
+                        <button type="button" class="btn btn-primary col"
+                            style="height: 40px; padding-top: 10px; padding-bottom: 10px;">Yes, Decline</button>
                     </div>
                 </div>
             </div>
@@ -190,32 +818,37 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-floating mb-4">
+                    <div class="form-floating mb-4 position-relative">
                         <input type="text" class="form-control delegate-form form-changes" id="delegateName"
-                            placeholder="Name">
-                        <label for="delegateName" class="delegate-form">Name</label>
+                            placeholder="Name" style="padding: 15px 12px !important; color: #2F2F2F;">
+                        <label for="delegateName"
+                            class="delegate-form d-flex justify-content-center flex-column">Name</label>
+                        <div id="nameSuggestions" class="dropdown-menu"></div> <!-- Suggestions container -->
                     </div>
                     <div class="form-floating mb-4">
-                        <input type="email" class="form-control  delegate-form form-changes" id="delegateEmail"
-                            placeholder="Email">
-                        <label for="delegateEmail" class="delegate-form">Email</label>
+                        <input type="email" class="form-control delegate-form form-changes" id="delegateEmail"
+                            placeholder="Email" style="padding: 15px 12px !important; color: #2F2F2F;">
+                        <label for="delegateEmail"
+                            class="delegate-form d-flex justify-content-center flex-column">Email</label>
                     </div>
                     <div class="form-floating mb-4">
                         <textarea type="text" class="form-control delegate-form form-changes" id="delegateReason"
-                            placeholder="Reason of Delegation" maxlength="200" style="height: 109px;"></textarea>
+                            placeholder="Reason of Delegation" maxlength="200"
+                            style="height: 109px; padding: 15px 12px !important;"></textarea>
                         <label for="delegateReason" class="delegate-form">Reason of Delegation</label>
-                        <small class="form-text text-muted d-flex justify-content-end">Maximum 200 characters
+                        <small class="form-text text-muted d-flex justify-content-end mt-2">Maximum 200 characters
                             allowed</small>
                     </div>
                     <div class="row">
                         <div class="col delegateBtn px-0">
-                            <button type="button" class="btn btn-primary w-100">Delegate</button>
+                            <button type="button" class="btn btn-primary w-100" style="height: 48px;">Delegate</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Share modal -->
     <div class="modal fade right" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true"
@@ -237,11 +870,13 @@
                     <div class="form-floating">
                         <input type="email" class="form-control  form-changes share-input" id="shareEmail"
                             placeholder="Email">
-                        <label for="shareEmail" class="share-form" style="color: #4A4A4A !important;">Email</label>
+                        <label for="shareEmail" class="share-email d-flex flex-column justify-content-center"
+                            style="color: #4A4A4A !important;">Email</label>
                     </div>
                     <div class="mb-4 d-flex align-items-center gap-2">
                         <img src="../../assets/vectors/tipIcon.svg">
-                        <small class="form-text text-muted mail-tooltip">Separate multiple email addresses with a
+                        <small class="form-text text-muted mail-tooltip" style="padding-top: 8px;">Separate multiple
+                            email addresses with a
                             semicolon</small>
                     </div>
                     <div class="form-floating">
@@ -262,7 +897,7 @@
                     </div>
                     <div class="row">
                         <div class="col shareBtn px-0">
-                            <button type="button" class="btn btn-primary w-100">Share</button>
+                            <button type="button" class="btn btn-primary w-100" style="height: 48px;">Share</button>
                         </div>
                     </div>
                 </div>
@@ -282,7 +917,8 @@
                 <div class="modal-body">
                     <div class="form-floating mb-4">
                         <textarea type="text" class="form-control comment-form form-changes" id="commentReason"
-                            placeholder="Add Comment" maxlength="200" style="height: 109px;"></textarea>
+                            placeholder="Add Comment" maxlength="200"
+                            style="height: 109px; padding: 12px !important;"></textarea>
                         <label for="commentReason" class="comment-form">Add Comment</label>
                         <div class="mb-4 mt-2">
                             <small class="form-text text-muted d-flex justify-content-end message-limit">Maximum 200
@@ -326,7 +962,7 @@
                     </div>
                     <div class="mb-3 sign-content">
                         <label class="form-label appearance-label">VISUAL APPEARANCE</label>
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist" style="padding-bottom: 16.5px;">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="sample-signatures-tab" data-bs-toggle="tab"
                                     data-bs-target="#sample-signatures" type="button" role="tab"
@@ -349,23 +985,28 @@
                         </ul>
 
                         <div class="form-floating mt-3">
-                            <input type="email" class="form-control  delegate-form form-changes" id="delegateEmail"
-                                placeholder="Signer Name" style="color: #2F2F2F">
+                            <input type="email"
+                                class="form-control  delegate-form form-changes d-flex flex-column justify-content-center"
+                                id="delegateEmail" placeholder="Signer Name"
+                                style="color: #2F2F2F; padding: 15px 12px !important;" value="Tejas Sarpotdar">
                             <label for="delegateEmail" class="delegate-form" style="color: #4A4A4A;">Signer Name</label>
                         </div>
-                        <div class="mb-2  d-flex align-items-center gap-2">
+                        <div class="mb-2  d-flex align-items-center gap-2 mt-1">
                             <img src="../../assets/vectors/tipIcon.svg">
                             <small class="form-text text-muted d-flex justify-content-start sign-limit">Maximum 30
                                 characters</small>
                         </div>
+                        <div class="w-100">
+                            <img class="w-100" src="../../assets/images/Arrow 16.svg">
+                        </div>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="sample-signatures" role="tabpanel"
-                                aria-labelledby="sample-signatures-tab">
+                            <div class="tab-pane fade show active d-flex flex-column" id="sample-signatures"
+                                role="tabpanel" aria-labelledby="sample-signatures-tab" style="gap: 20px;">
                                 <div class="form-check sign-form  mt-3">
                                     <label class="sign-label">Signature 1</label>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <input class="form-check-input radio-input" type="radio" name="signature"
-                                            id="signature1" style="padding-left: 0px;">
+                                    <div class="d-flex align-items-center gap-2 radio-item">
+                                        <input class="form-check-input " type="radio" name="signature" id="signature1"
+                                            style="padding-left: 0px;">
                                         <label class="form-check-label " for="signature1">
                                             <img src="../../assets/images/sign1.svg" alt="Signature 1">
 
@@ -374,20 +1015,20 @@
                                 </div>
                                 <div class="form-check sign-form  mt-3">
                                     <label class="sign-label">Signature 2</label>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <input class="form-check-input radio-input" type="radio" name="signature"
-                                            id="signature2" style="padding-left: 0px;">
+                                    <div class="d-flex align-items-center gap-2 custom-radio radio-item">
+                                        <input class="form-check-input " type="radio" name="signature" id="signature2"
+                                            style="padding-left: 0px;">
                                         <label class="form-check-label" for="signature2">
                                             <img src="../../assets/images/sign2.svg" alt="Signature 2">
 
                                         </label>
                                     </div>
                                 </div>
-                                <div class="form-check sign-form  mt-3 signatureThree">
+                                <div class="form-check sign-form  mt-3">
                                     <label class="sign-label">Signature 3</label>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <input class="form-check-input radio-input" type="radio" name="signature"
-                                            id="signature3" style="padding-left: 0px;">
+                                    <div class="d-flex align-items-center gap-2 radio-item">
+                                        <input class="form-check-input " type="radio" name="signature" id="signature3"
+                                            style="padding-left: 0px;">
                                         <label class="form-check-label" for="signature3">
                                             <img src="../../assets/images/sign3.svg" alt="Signature 3">
 
@@ -396,9 +1037,9 @@
                                 </div>
                                 <div class="form-check sign-form  mt-3">
                                     <label class="sign-label">Signature 4</label>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <input class="form-check-input radio-input" type="radio" name="signature"
-                                            id="signature1" style="padding-left: 0px;">
+                                    <div class="d-flex align-items-center gap-2 radio-item">
+                                        <input class="form-check-input " type="radio" name="signature" id="signature1"
+                                            style="padding-left: 0px;">
                                         <label class="form-check-label " for="signature1">
                                             <img src="../../assets/images/sign1.svg" alt="Signature 4">
 
@@ -408,7 +1049,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row addSignBtn">
+                    <div class="row addSignBtn mx-0">
                         <button type="button" class="btn btn-secondary me-2 col resetBtn" data-bs-dismiss="modal"
                             style="border-radius: 4px;">Reset</button>
                         <button type="button" class="btn btn-primary col "
@@ -425,7 +1066,496 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../../main.js"></script>
+    <script>
+        $(document).ready(function () {
+            function openModal(buttonId, modalId) {
+                $(buttonId).on('click', function () {
+                    $(modalId).modal('show');
+                });
+            }
+
+            openModal('#openRemarksModal', '#remarksModal');
+            openModal('#openDelegateModal', '#delegateModal');
+            openModal('#openShareModal', '#shareModal');
+            openModal('#openCommentModal', '#commentModal');
+            openModal('#openAddSign', '#addSignModal');
+            $('.okay-btn').on('click', function () {
+                $('#signatureModal').modal('hide');
+            });
+            let comments = [];
+            let editIndex = -1;
+
+            function renderComments() {
+                $('.comment-text').empty();
+                comments.map((comment, index) => {
+                    var currentDateTime = comment.timestamp;
+                    var commentHtml = `
+            <div class="form-control comment-default comment-list p-3 mb-4">
+                <p class="edit-text comment-head">${comment.text}</p>
+                <p class="comment-person">Tejas Sarpotdar <span class="user-comment">(You)</span></p>
+                <span class="comment-date">${currentDateTime}</span>
+                <div class="d-flex align-items-center gap-2 mt-2">
+                    <button class="edit-link" data-index="${index}">
+                        <img src="../../assets/vectors/edit.svg"> 
+                        Edit 
+                    </button>
+                    <button class="delete-link" data-index="${index}">
+                        <img src="../../assets/vectors/Trash.svg">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        `;
+                    $('.comment-text').append(commentHtml);
+                });
+
+                if (comments.length > 0) {
+                    $('.comment-text').css("display", "block");
+                } else {
+                    $('.comment-text').css("display", "none");
+                }
+            }
+
+            $('#postCommentBtn').click(function () {
+                var commentText = $('#commentReason').val().trim();
+                var currentDate = new Date().toLocaleString('en-US', {
+                    month: 'short',
+                    day: '2-digit',
+                    year: 'numeric'
+                }).replace(',', '');
+                var currentTime = new Date().toLocaleString('en-US', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false
+                });
+                var currentDateTime = `${currentDate} | ${currentTime}`;
+
+                if (commentText.length > 0) {
+                    if (editIndex === -1) {
+                        comments.push({ text: commentText, timestamp: currentDateTime });
+                    } else {
+                        comments[editIndex].text = commentText;
+                        comments[editIndex].timestamp = currentDateTime;
+                        editIndex = -1;
+                        $('#postCommentBtn').text('Post');
+                    }
+                    renderComments();
+                    $('#commentReason').val('');
+                    $('#postCommentBtn').removeClass('active'); // Remove active class when comment is posted
+                }
+            });
+
+            $(document).on('click', '.edit-link', function () {
+                editIndex = $(this).data('index');
+                var comment = comments[editIndex];
+                $('#commentReason').val(comment.text).focus();
+                $('#postCommentBtn').text('Update');
+            });
+
+            $(document).on('click', '.delete-link', function () {
+                var index = $(this).data('index');
+                comments.splice(index, 1);
+                renderComments();
+                $('#commentReason').val('');
+                $('#postCommentBtn').text('Post');
+                $('#postCommentBtn').removeClass('active'); // Remove active class when comment is deleted
+            });
+
+            // Add focus and blur event listeners to change button color
+            $('#commentReason').on('focus', function () {
+                $('#postCommentBtn').addClass('active');
+            });
+
+            $('#commentReason').on('blur', function () {
+                if ($(this).val().trim() === '') {
+                    $('#postCommentBtn').removeClass('active');
+                }
+            });
+
+
+
+            // Landing page dropdown selection
+            $('.dropdown-menu').on('click', '.dropdown-item', function (e) {
+                e.preventDefault(); // Prevent default link behavior
+                // Get the text content of the selected item
+                var selectedText = $(this).text();
+                // Update the button text
+                $('#dropdownMenuButton').text(selectedText);
+            });
+
+            // delegate modal dropdown
+            const users = [
+                { name: 'Rajiv', email: 'rajiv@yellowchalk.com' },
+                { name: 'Tejas', email: 'tejas@yellowchalk.com' },
+                { name: 'Ravi', email: 'ravi@example.com' },
+                // Add more users as needed
+            ];
+
+            $(document).ready(function () {
+                $('#delegateName').on('input', function () {
+                    const query = $(this).val().toLowerCase();
+                    if (query.length >= 4) {
+                        const matches = users.filter(user => user.name.toLowerCase().includes(query));
+                        displaySuggestions(matches, query);
+                    } else {
+                        $('#nameSuggestions').hide();
+                    }
+                });
+
+                $(document).on('click', '.dropdown-item', function () {
+                    const name = $(this).data('name');
+                    const email = $(this).data('email');
+                    $('#delegateName').val(name);
+                    $('#delegateEmail').val(email);
+                    $('#nameSuggestions').hide();
+                });
+
+                $(document).click(function (event) {
+                    if (!$(event.target).closest('#nameSuggestions, #delegateName').length) {
+                        $('#nameSuggestions').hide();
+                    }
+                });
+            });
+
+            function displaySuggestions(matches, query) {
+                $('#nameSuggestions').empty().show();
+                matches.forEach(match => {
+                    const highlightedName = match.name.replace(new RegExp(query, 'gi'), (match) => `<span class="highlight">${match}</span>`);
+                    const highlightedEmail = match.email.replace(new RegExp(query, 'gi'), (match) => `<span class="highlight">${match}</span>`);
+                    const item = `<div class="dropdown-item" data-name="${match.name}" data-email="${match.email}">
+                        ${highlightedName}<br><small>${highlightedEmail}</small>
+                      </div>`;
+                    $('#nameSuggestions').append(item);
+                });
+            }
+
+
+
+            $('.comment-text').hide();
+            $('.companyNameList').hide();
+            $('.cg-companyNameList').hide();
+            let companies = ["EMUDHRA LTD-12345677", "eMudhra NBD- 190419786", "Emirates Airlines- 98090", "EMUDHRA LTD-12345677", "eMudhra NBD- 190419786", "Emirates Airlines- 98090"];
+            let selectedco
+            companies.map((company) => {
+                var listItem = company
+                var htmlContent = `
+        <div class="listItem" style="width:100%; padding:6px 3px;">${company}</div>
+        `
+                $('.searchList').append(htmlContent)
+            })
+            // $('.searchList').hide();
+            $(document).on('click', '.companySearchList', function () {
+                $('.companyNameList').toggle();
+            });
+            $(document).on('click', '.listItem', function () {
+                $('.companySearchList').val($(this).text());
+                $('.companyNameList').hide();
+            });
+            $(document).on('input', '.companySearchInput', function () {
+                if ($(this).val().length > 3) {
+                    $('.searchList').show();
+                } else {
+                    // $('.searchList').hide();
+                }
+            });
+            let groupName = ""
+            $(document).on('input', '.groupNameInput', function () {
+                groupName = $(this).val()
+                console.log(groupName)
+            });
+
+            companies.map((company) => {
+                var listItem = company
+                var htmlContent = `
+        <div class="listItem" style="width:100%; padding:6px 3px;">${company}</div>
+        `
+                $('.cg-searchList').append(htmlContent)
+            })
+            // $('.searchList').hide();
+            $(document).on('click', '.cg-companySearchList', function () {
+                $('.cg-companyNameList').toggle();
+            });
+            $(document).on('click', '.listItem', function () {
+                $('.cg-companySearchList').val($(this).text());
+                $('.cg-companyNameList').hide();
+            });
+            $(document).on('input', '.cg-companySearchInput', function () {
+                if ($(this).val().length > 3) {
+                    $('.cg-searchList').show();
+                } else {
+                    // $('.searchList').hide();
+                }
+            });
+            let signatoryDetails = [
+                {
+                    name: "Tejas",
+                    mail: "tejas@gmail.com",
+                    company: "Emudhra LTD",
+                    num: "289289"
+                },
+                {
+                    name: "Akhil",
+                    mail: "akhil@gmail.com",
+                    company: "Emudhra Co",
+                    num: "783023"
+                },
+                {
+                    name: "Martin",
+                    mail: "akhil@gmail.com",
+                    company: "Emirates",
+                    num: "9882023"
+                }
+            ]
+            signatoryDetails.map((signatory, index) => {
+                var listItem = signatory
+                var htmlContent = `
+        <div class="d-flex w-100 py-1 pt-3 justify-content-between align-items-center signatoryItem" style="${index == signatoryDetails.length - 1 ? "" : "border-bottom: 1px solid #ececec;"}">
+            <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck-${listItem.num}">
+                <img height="50px" width="50px" src="../../../assets/images/signatory profile.png" alt="pfp"/>
+                <div class="d-flex flex-column gap-0">
+                    <h5 style="font-size: 16px;">${listItem.name}</h5>
+                    <p style="line-height: 5px; color: #494949;">${listItem.mail}</p>
+                    <p style="line-height: 5px; color: #494949;">${listItem.company}</p>
+                    <p style="line-height: 5px; color: #494949;">${listItem.num}</p>
+                </div>
+            </label>
+            <div class="px-2 mx-3">
+                <input class="form-check-input shadow-none signatoryCheck" type="checkbox" id="signatoryCheck-${listItem.num}"  data-signatory='${JSON.stringify(listItem)}'>
+            </div>
+        </div>
+        `
+                $('.signatoryList').append(htmlContent)
+            })
+            $('.signatoryDetails').hide();
+            $(document).on('click', '.signatoryListSearch', function () {
+                $('.signatoryDetails').toggle();
+            });
+            signatoryDetails.map((signatory, index) => {
+                var listItem = signatory
+                var htmlContent = `
+        <div class="d-flex w-100 py-1 pt-3 justify-content-between align-items-center cg-signatoryItem" style="${index == signatoryDetails.length - 1 ? "" : "border-bottom: 1px solid #ececec;"}">
+            <label class="d-flex gap-3 w-100 align-items-center" for="cg-signatoryCheck-${listItem.num}">
+                <img height="50px" width="50px" src="../../../assets/images/signatory profile.png" alt="pfp"/>
+                <div class="d-flex flex-column gap-0">
+                    <h5 style="font-size: 16px;">${listItem.name}</h5>
+                    <p style="line-height: 5px; color: #494949;">${listItem.mail}</p>
+                    <p style="line-height: 5px; color: #494949;">${listItem.company}</p>
+                    <p style="line-height: 5px; color: #494949;">${listItem.num}</p>
+                </div>
+            </label>
+            <div class="px-2 mx-3">
+                <input class="form-check-input shadow-none cg-signatoryCheck" type="checkbox" id="cg-signatoryCheck-${listItem.num}" data-signatory='${JSON.stringify(listItem)}'>
+            </div>
+        </div>
+        `
+                $('.cg-signatoryList').append(htmlContent)
+            })
+            $('.cg-signatoryDetails').hide();
+            $(document).on('click', '.cg-signatoryListSearch', function () {
+                $('.cg-signatoryDetails').toggle();
+            });
+
+            let selectedItems = []
+
+            $('.okay-btn').on('click', function () {
+                $('#createGroupModal').modal('hide');
+            });
+            $('.cg-signatoryList').on('change', '.cg-signatoryCheck', function () {
+                let signatory = JSON.parse($(this).attr('data-signatory'));
+                if ($(this).is(':checked')) {
+                    // Add to selected array
+                    selectedItems.push(signatory);
+                } else {
+                    // Remove from selected array
+                    selectedItems = selectedItems.filter(item => item.num !== signatory.num);
+                }
+                console.log(selectedItems);
+                if (selectedItems.length == 0) {
+                    $('.cg-noSigns').show();
+                    $('.cg-items').hide();
+
+                } else {
+                    $('.cg-noSigns').hide();
+                    $('.cg-items').show();
+                }
+                updateSelectedItems();
+            });
+            if (selectedItems.length == 0) {
+                $('.cg-items').hide();
+
+            } else {
+                $('.cg-items').show();
+            }
+            function updateSelectedItems() {
+                // Clear the selected items list
+                $('.cg-selectedItems').html('');
+
+                // Generate and append the new list of selected items
+                selectedItems.map(signatory => {
+                    var htmlContent = `
+            <div class="d-flex w-100 justify-content-between align-items-center py-2" style="background-color: #F2F5FB;">
+                <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
+                    <img height="50px" width="50px" src="../../../assets/images/signatory profile.png" alt="pfp"/>
+                    <div class="d-flex flex-column gap-0">
+                        <h5 style="font-size: 16px;">${signatory.name}</h5>
+                        <p style="line-height: 5px; color: #494949;">${signatory.mail}</p>
+                    </div>
+                </label>
+                <div class="px-2 d-flex gap-2">
+                    <img src="../../../assets/vectors/Trash.svg"/>
+                    <img src="../../../assets/vectors/menu.svg"/>
+                </div>
+            </div>
+            `;
+                    $('.cg-selectedItems').append(htmlContent);
+                });
+
+            }
+            let individual_selectedItems = []
+            $('.signatoryList').on('change', '.signatoryCheck', function () {
+                let signatory = JSON.parse($(this).attr('data-signatory'));
+                if ($(this).is(':checked')) {
+                    // Add to selected array
+                    individual_selectedItems.push(signatory);
+                } else {
+                    // Remove from selected array
+                    individual_selectedItems = individual_selectedItems.filter(item => item.num !== signatory.num);
+                }
+                console.log(individual_selectedItems);
+                if (individual_selectedItems.length == 0) {
+                    $('.noSigns').show();
+                    $('.AddSignsBtn').prop('disabled', true);
+
+                } else {
+                    $('.noSigns').hide();
+                    $('.AddSignsBtn').prop('disabled', false);
+                }
+                updateindividualSelectedItems();
+            });
+
+            function updateindividualSelectedItems() {
+                // Clear the selected items list
+                $('.individual_selectedItems').html('');
+
+                // Generate and append the new list of selected items
+                individual_selectedItems.map(signatory => {
+                    var htmlContent = `
+            <div class="d-flex w-100 justify-content-between align-items-center py-2" style="background-color: #F2F5FB;">
+                <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
+                    <img height="50px" width="50px" src="../../../assets/images/signatory profile.png" alt="pfp"/>
+                    <div class="d-flex flex-column gap-0">
+                        <h5 style="font-size: 16px;">${signatory.name}</h5>
+                        <p style="line-height: 5px; color: #494949;">${signatory.mail}</p>
+                    </div>
+                </label>
+                <div class="px-2 d-flex gap-2">
+                    <img src="../../../assets/vectors/Trash.svg"/>
+                    <img src="../../../assets/vectors/menu.svg"/>
+                </div>
+            </div>
+            `;
+                    $('.individual_selectedItems').append(htmlContent);
+                });
+                localStorage.setItem("individual_selectedItems", JSON.stringify(individual_selectedItems))
+            }
+            let selectedSignatory = []
+            selectedSignatory = JSON.parse(localStorage.getItem("selectedSignatory")) || []
+            selectedSignatory.map((signatory, index) => {
+                let htmlContent = signatory.size ? `
+        <div class="d-flex w-100 justify-content-between align-items-center py-2  rounded-2 my-2" style="background-color: #F2F5FB;">
+            <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
+                <img height="50px" width="50px" src="../../assets/images/signatory profile.png" alt="pfp"/>
+                <div class="d-flex flex-column gap-0">
+                    <h5 style="font-size: 16px;">${signatory.name}</h5>
+                    <p style="line-height: 5px; color: #494949;">${signatory.size} participants</p>
+                    <p style="line-height: 5px; color: #494949; font-weight:bold;">Signer</p>
+                </div>
+            </label>
+            <div class="px-2 d-flex gap-2">
+                <img src="../../assets/vectors/Trash.svg"/>
+                <img src="../../assets/vectors/menu.svg"/>
+            </div>
+        </div>
+        ` : `
+        <div class="d-flex w-100 justify-content-between align-items-center py-2  rounded-2 my-2" style="background-color: #F2F5FB;">
+            <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
+                <img height="50px" width="50px" src="../../assets/images/signatory profile.png" alt="pfp"/>
+                <div class="d-flex flex-column gap-0">
+                    <h5 style="font-size: 16px;">${signatory.name}</h5>
+                    <p style="line-height: 5px; color: #494949;">${signatory.mail}</p>
+                    <p style="line-height: 5px; color: #494949; font-weight:bold;">Signer</p>
+                </div>
+            </label>
+            <div class="px-2 d-flex gap-2">
+                <img src="../../assets/vectors/Trash.svg"/>
+                <img src="../../assets/vectors/menu.svg"/>
+            </div>
+        </div>
+        `
+                $('.selectedSignList').append(htmlContent);
+            })
+            function AddSelectedSignatory(type) {
+                selectedSignatory = JSON.parse(localStorage.getItem("selectedSignatory")) || []
+                if (type == "group") {
+                    selectedSignatory.push({ name: groupName, size: selectedItems.length })
+                }
+                if (type == "individual") {
+                    individual_selectedItems.forEach((item) => {
+                        selectedSignatory?.push(item);
+                    });
+                }
+                localStorage.setItem('selectedSignatory', JSON.stringify(selectedSignatory));
+                console.log(selectedSignatory);
+                window.location.href = '../index.html';
+            }
+            $('.createGroupModalBtn').click(function () {
+                if (selectedItems.length <= 1) {
+                    $('#createGroupModal').modal('show');
+                } else {
+                    AddSelectedSignatory("group")
+                }
+            });
+            $('.AddSignsBtn').click(function () {
+                AddSelectedSignatory("individual")
+                window.location.href = '../index.html';
+                console.log(localStorage.getItem("selectedSignatory"))
+
+            });
+            if ((selectedSignatory?.length == 0)) {
+                $('.noSignList').show();
+                $('.SignList').hide();
+
+            } else {
+                $('.noSignList').hide();
+                $('.SignList').show();
+            }
+            ///New Change 22/7/2024 1:30pm
+            const selectedSign = localStorage.getItem('selectedSignatory');
+
+            if (selectedSign && selectedSign.length !== 0) {
+                // Show next and change Add sign button style
+                $("#AddSignatories").addClass("AddSignatories-secondary");
+                $('#signNext').show()
+            } else {
+                $("#AddSignatories").removeClass("AddSignatories-secondary");
+                $('#signNext').hide()
+            }
+            $('#docSidepreviewBtn').click(function () {
+                $(".doc-sidebar").toggleClass("doc-sidebaropen");
+            });
+            let isEstamping = false
+            $('#toggleSwitch1').change(function () {
+                if (this.checked) {
+                    isEstamping = true
+                    $('.ApplyEstampingBtn').prop('disabled', false);
+                } else {
+                    isEstamping = false
+                    $('.ApplyEstampingBtn').prop('disabled', true);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
