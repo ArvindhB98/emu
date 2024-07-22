@@ -1234,7 +1234,7 @@ footer {
     background-color: #FFFFFF;
     padding: 20px 0px;
 }
-.highlight {
-    background-color: yellow;
+.highlight-SearchText {
+    background-color: #000000;
     font-weight: bold;
 }

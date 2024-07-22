@@ -99,7 +99,7 @@ $(document).ready(function () {
     companies.map((company)=>{
         var listItem = company
         var htmlContent = `
-        <div class="listItem" style="width:100%; padding:6px 3px;">${company}</div>
+        <div class="listItem" style="width:100%; padding:6px 3px; color:#525252;">${company}</div>
         `
         $('.searchList').append(htmlContent)
     })
@@ -463,11 +463,11 @@ $(document).ready(function () {
         localStorage.setItem(arrName,JSON.stringify(arr))
         window.location.reload()
     }
-    const highlightMatches = (search) => {
+    const highlightMatches = (search,searchListName) => {
         const regex = new RegExp(`(${search})`, 'gi'); // Create a case-insensitive regex
-        $('.searchList div').each(function() {
+        $(`.${searchListName} div`).each(function() {
             const text = $(this).text();
-            const highlightedText = text.replace(regex, '<span class="highlight">$1</span>');
+            const highlightedText = text.replace(regex, '<span class="highlight-SearchText">$1</span>');
             $(this).html(highlightedText);
         });
     };
@@ -475,7 +475,12 @@ $(document).ready(function () {
     $('.companySearchInput').on('input', function() {
         const search = $(this).val();
         console.log(search)
-        highlightMatches(search);
+        highlightMatches(search,"searchList");
+    });
+    $('.cg-companySearchInput').on('input', function() {
+        const search = $(this).val();
+        console.log(search)
+        highlightMatches(search,"cg-searchList");
     });
 });
 
