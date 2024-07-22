@@ -1038,7 +1038,7 @@ input[type="checkbox"]:checked {
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     position: absolute;
-    right: -29px;
+    right: -31px;
     top: 50%;
     transform: translate(0%, -50%);
 }
