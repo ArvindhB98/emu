@@ -385,7 +385,7 @@ $(document).ready(function () {
             `
             $('.selectedSignList').append(htmlContent);
             $(`.deleteSelectedSign${signatory.name.replace(/\s+/g, '')}`).on('click', function() {
-                let className = $(`.deleteSelectedSign${signatory.name}`).attr('class');
+                let className = $(`.deleteSelectedSign${signatory.name.replace(/\s+/g, '')}`).attr('class');
         
                     // Find the element with that class and get its 'data-name' attribute
                 let dataName = $(`.${className}`).attr('data-name');
