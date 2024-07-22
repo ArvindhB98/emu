@@ -363,7 +363,7 @@ $(document).ready(function () {
                     </div>
                 </label>
                 <div class="px-2 d-flex gap-2">
-                    <img id="deleteSelectedSign" class="deleteSelectedSign${signatory.name} ds" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
+                    <img id="deleteSelectedSign" class="deleteSelectedSign${signatory.name}" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
                     <img src="../../assets/vectors/menu.svg"/>
                 </div>
             </div>
@@ -378,12 +378,19 @@ $(document).ready(function () {
                     </div>
                 </label>
                 <div class="px-2 d-flex gap-2">
-                    <img id="deleteSelectedSign" class="deleteSelectedSign${signatory.name} ds" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
+                    <img id="deleteSelectedSign" class="deleteSelectedSign${signatory.name}" data-name=${signatory.name.replace(/\s+/g, '')} src="../../assets/vectors/Trash.svg"/>
                     <img src="../../assets/vectors/menu.svg"/>
                 </div>
             </div>
             `
             $('.selectedSignList').append(htmlContent);
+            $('#deleteSelectedSign').on('click', function() {
+                let className = $('#deleteSelectedSign').attr('class');
+        
+                    // Find the element with that class and get its 'data-name' attribute
+                let dataName = $(`.${className}`).attr('data-name');
+                removeItemByName(dataName,selectedSignatory,'selectedSignatory')
+            })
         })
     }
     updateSelectedSignatoryList()
@@ -446,13 +453,7 @@ $(document).ready(function () {
             $('.ApplyEstampingBtn').prop('disabled', true);
         }
     });
-    $('.ds').on('click', function() {
-        let className = $('.ds').attr('class');
-
-            // Find the element with that class and get its 'data-name' attribute
-        let dataName = $(`.${className}`).attr('data-name');
-        removeItemByName(dataName,selectedSignatory,'selectedSignatory')
-    })
+   
     function removeItemByName(name,arr,arrName) {
         alert(name)
         const index = arr.findIndex(item => item.name.replace(/\s+/g, '').toLowerCase() === name.toLowerCase());
