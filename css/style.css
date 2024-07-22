@@ -969,7 +969,7 @@ input[type="checkbox"]:checked {
 .filehodler>label{
    background-color: #323244CC;
    padding: 0px;
-   bottom: 4px;
+   bottom: 0px;
    width: 100%;
    text-align: center;
    line-height: 20px;
