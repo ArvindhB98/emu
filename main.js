@@ -454,6 +454,9 @@ $(document).ready(function () {
         if (index !== -1) {
             selectedSignatory.splice(index, 1);
         }
+        if(selectedSignatory.length===1){
+            selectedSignatory=[]
+        }
         localStorage.setItem('selectedSignatory',JSON.stringify(selectedSignatory))
         window.location.reload()
     }
