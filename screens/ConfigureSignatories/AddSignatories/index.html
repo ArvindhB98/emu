@@ -32,6 +32,13 @@
             transition: 0.25s;
             box-shadow: 0 6px 4px -2px rgba(160, 160, 160, 0.3);
         }
+        .modal-body{
+            transition: 0.25s;
+        }
+        .cg-shadow {
+            transition: 0.25s;
+            box-shadow: 0 6px 4px -2px rgba(160, 160, 160, 0.3);
+        }
     </style>
 </head>
 
@@ -211,12 +218,12 @@
     <div class="modal fade right modal-options" id="createGroup" tabindex="-1" aria-labelledby="createGroupModalLabel"
         aria-hidden="true" style="margin-top: 48px;">
         <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="d-flex px-4 mt-4 w-100 justify-content-between">
+            <div class="modal-content ">
+                <div class="d-flex modalheader px-4 mt-4 w-100 justify-content-between">
                     <p id="createGroupModalLabel" style="font-size: 16px; font-weight:400;">Create Group</p>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body pt-3">
+                <div class="modal-body pt-3 bg">
                     <div class="container" style="margin-bottom: 150px;">
                         <div class="form-floating z-3">
                             <input type="name" class="form-control  delegate-form form-changes groupNameInput" id="delegateCompany"
@@ -378,8 +385,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../../main.js"></script>
     <script>
-        let isScrolling;
+        
         window.addEventListener('scroll', function() {
+            let isScrolling;
             const header = document.querySelector('header');
             header.classList.add('header-shadow');
             
@@ -389,6 +397,18 @@
                 header.classList.remove('header-shadow');
             }, 200); // Adjust the timeout duration as needed
         });
+        let modal = document.querySelector('.modal-body');
+        modal.addEventListener('scroll', function(){
+            let isScrolling2;
+            const modalheader = document.querySelector('.modalheader');
+            modalheader.classList.add('cg-shadow');
+            
+            window.clearTimeout(isScrolling2);
+
+            isScrolling2 = setTimeout(function() {
+                modalheader.classList.remove('cg-shadow');
+            }, 200); // Adjust the timeout duration as needed
+        })
     </script>
 </body>
 
