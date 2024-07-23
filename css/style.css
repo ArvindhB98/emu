@@ -2186,43 +2186,6 @@ input[type="checkbox"]:checked {
 }
 
 /* Latest */
-.ApplyEstampingBtn {
-    background: #225BBF;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    height: 48px;
-    font-family: Gilroy SemiBold;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.6px;
-}
-
-.ApplyEstampingBtn:hover {
-    background: #2658ad;
-    height: 48px;
-    color: white;
-}
-
-.ApplyEstampingBtn:disabled {
-    background: #A7BDE5;
-}
-
-.AddSignatories-secondary {
-    background-color: white;
-    color: #2F2F2F;
-    font-family: 'Gilroy Semibold';
-    border: 1px solid #2F2F2F;
-}
-
-.AddSignatories-secondary:hover {
-    background-color: white !important;
-    color: #2F2F2F !important;
-    font-family: 'Gilroy Semibold';
-    border: 1px solid #2F2F2F;
-}
-
-
 .modal.fade.right .modal-dialog {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
