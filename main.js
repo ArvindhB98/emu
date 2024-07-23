@@ -163,19 +163,22 @@ $(document).ready(function () {
             name:"Tejas",
             mail:"tejas@gmail.com",
             company:"Emudhra LTD",
-            num:"289289"
+            num:"289289",
+            pfp:"../../../assets/images/pfp1.png"
         },
         {
             name:"Akhil",
             mail:"akhil@gmail.com",
             company:"Emudhra Co",
-            num:"783023"
+            num:"783023",
+            pfp:"../../../assets/images/signatory profile.png"
         },
         {
-            name:"Martin",
-            mail:"akhil@gmail.com",
+            name:"ManjuNath Bath",
+            mail:"manjunath@gmail.com",
             company:"Emirates",
-            num:"9882023"
+            num:"9882023",
+            pfp:"../../../assets/images/pfp2.png"
         }
     ]
     signatoryDetails.map((signatory,index)=>{
@@ -183,9 +186,9 @@ $(document).ready(function () {
         var htmlContent = `
         <div class="d-flex w-100 py-1 pt-3 justify-content-between align-items-center signatoryItem" style="${index==signatoryDetails.length-1 ? "" :"border-bottom: 1px solid #ececec;"}">
             <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck-${listItem.num}">
-                <img height="50px" width="50px" src="../../../assets/images/signatory profile.png" alt="pfp"/>
+                <img height="50px" width="50px" src="${listItem.pfp}" alt="pfp"/>
                 <div class="d-flex flex-column gap-0">
-                    <h5 style="font-size: 16px;">${listItem.name}</h5>
+                    <h5 style="font-size: 16px; color: #494949;">${listItem.name}</h5>
                     <p style="line-height: 5px; color: #494949;">${listItem.mail}</p>
                     <p style="line-height: 5px; color: #494949;">${listItem.company}</p>
                     <p style="line-height: 5px; color: #494949;">${listItem.num}</p>
@@ -207,9 +210,9 @@ $(document).ready(function () {
         var htmlContent = `
         <div class="d-flex w-100 py-1 pt-3 justify-content-between align-items-center cg-signatoryItem" style="${index==signatoryDetails.length-1 ? "" :"border-bottom: 1px solid #ececec;"}">
             <label class="d-flex gap-3 w-100 align-items-center" for="cg-signatoryCheck-${listItem.num}">
-                <img height="50px" width="50px" src="../../../assets/images/signatory profile.png" alt="pfp"/>
+                <img height="50px" width="50px" src="${signatory.pfp}" alt="pfp"/>
                 <div class="d-flex flex-column gap-0">
-                    <h5 style="font-size: 16px;">${listItem.name}</h5>
+                    <h5 style="font-size: 16px; color:#494949;">${listItem.name}</h5>
                     <p style="line-height: 5px; color: #494949;">${listItem.mail}</p>
                     <p style="line-height: 5px; color: #494949;">${listItem.company}</p>
                     <p style="line-height: 5px; color: #494949;">${listItem.num}</p>
@@ -279,7 +282,7 @@ $(document).ready(function () {
             var htmlContent = `
             <div class="d-flex w-100 justify-content-between align-items-center py-2" style="background-color: #F2F5FB;">
                 <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
-                    <img height="50px" width="50px" src="../../../assets/images/signatory profile.png" alt="pfp"/>
+                    <img height="50px" width="50px" src="${signatory.pfp}" alt="pfp"/>
                     <div class="d-flex flex-column gap-0">
                         <h5 style="font-size: 16px;">${signatory.name}</h5>
                         <p style="line-height: 5px; color: #494949;">${signatory.mail}</p>
@@ -327,7 +330,7 @@ $(document).ready(function () {
             var htmlContent = `
             <div class="d-flex w-100 justify-content-between align-items-center py-2 rounded-2" style="background-color: #F2F5FB;">
                 <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
-                    <img height="50px" width="50px" src="../../../assets/images/signatory profile.png" alt="pfp"/>
+                    <img height="50px" width="50px" src="${signatory.pfp}" alt="pfp"/>
                     <div class="d-flex flex-column gap-0">
                         <h5 style="font-size: 16px;">${signatory.name}</h5>
                         <p style="line-height: 5px; color: #494949;">${signatory.mail}</p>
@@ -355,11 +358,11 @@ $(document).ready(function () {
             let htmlContent = signatory.size ? `
             <div class="d-flex w-100 justify-content-between align-items-center py-2  rounded-2 my-2" style="background-color: #F2F5FB;">
                 <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
-                    <img height="50px" width="50px" src="../../assets/images/signatory profile.png" alt="pfp"/>
+                    <img height="50px" width="50px" src="../../assets/images/grouppfp.png" alt="pfp"/>
                     <div class="d-flex flex-column gap-0">
                         <h5 style="font-size: 16px;">${signatory.name}</h5>
-                        <p style="line-height: 5px; color: #494949;">${signatory.size} participants</p>
-                        <p style="line-height: 5px; color: #494949; font-weight:bold;">Signer</p>
+                        <p style="line-height: 5px; color:  #6A6F79;">${signatory.size} participants</p>
+                        <p style="line-height: 5px; color: #6A6F79; ">Signer</p>
                     </div>
                 </label>
                 <div class="px-2 d-flex gap-2">
@@ -370,11 +373,11 @@ $(document).ready(function () {
             ` : `
             <div class="d-flex w-100 justify-content-between align-items-center py-2  rounded-2 my-2" style="background-color: #F2F5FB;">
                 <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck">
-                    <img height="50px" width="50px" src="../../assets/images/signatory profile.png" alt="pfp"/>
+                    <img height="50px" width="50px" src="${signatory.pfp.substring(3)}" alt="pfp"/>
                     <div class="d-flex flex-column gap-0">
                         <h5 style="font-size: 16px;">${signatory.name}</h5>
-                        <p style="line-height: 5px; color: #494949;">${signatory.mail}</p>
-                        <p style="line-height: 5px; color: #494949; font-weight:bold;">Signer</p>
+                        <p style="line-height: 5px; color:  #6A6F79;">${signatory.mail}</p>
+                        <p style="line-height: 5px; color:  #6A6F79;">Signer</p>
                     </div>
                 </label>
                 <div class="px-2 d-flex gap-2">
@@ -408,7 +411,7 @@ $(document).ready(function () {
         console.log(selectedSignatory);
         window.location.href = '../index.html';
     }
-    $('.createGroupModalBtn').click(function() {
+    $('.createGroupModalBtn').click(function() {   
         if (selectedItems.length <= 1) {
             $('#createGroupModal').modal('show');
         }else{

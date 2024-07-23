@@ -153,6 +153,7 @@
 
 .okay-btn:hover {
     background: #225BBF;
+    color: white;
     margin-bottom: 10px;
 }
 
@@ -1115,6 +1116,18 @@ input[type="checkbox"]:checked {
 .toggle-control-input:checked + .toggle-control-label::before {
     transform: translateX(1.25rem);
 }
+.createGroupModalBtn{
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #225BBF !important;
+    color: white !important;
+    font-family: 'Gilroy Semibold';
+}
+.createGroupModalBtn:hover{
+    background-color: #225BBF !important;
+    color: white !important;
+}
 .AddSignsBtn{
     height: 48px;
     border: none;
@@ -1288,5 +1301,4 @@ footer {
 }
 .highlight-SearchText {
     color: #000000;
-    font-weight: 400;
 }
