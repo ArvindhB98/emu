@@ -188,10 +188,10 @@ $(document).ready(function () {
             <label class="d-flex gap-3 w-100 align-items-center" for="signatoryCheck-${listItem.num}">
                 <img height="50px" width="50px" src="${listItem.pfp}" alt="pfp"/>
                 <div class="d-flex flex-column gap-0">
-                    <h5 style="font-size: 16px; color: #4E4D4D">${listItem.name}</h5>
-                    <p style="line-height: 5px; color: #4E4D4D">${listItem.mail}</p>
-                    <p style="line-height: 5px; color: #4E4D4D">${listItem.company}</p>
-                    <p style="line-height: 5px; color: #4E4D4D">${listItem.num}</p>
+                    <h5 style="font-size: 16px; color: #565353">${listItem.name}</h5>
+                    <p style="line-height: 5px; color: #565353">${listItem.mail}</p>
+                    <p style="line-height: 5px; color: #565353">${listItem.company}</p>
+                    <p style="line-height: 5px; color: #565353">${listItem.num}</p>
                 </div>
             </label>
             <div class="px-2 mx-3">
@@ -212,10 +212,10 @@ $(document).ready(function () {
             <label class="d-flex gap-3 w-100 align-items-center" for="cg-signatoryCheck-${listItem.num}">
                 <img height="50px" width="50px" src="${signatory.pfp}" alt="pfp"/>
                 <div class="d-flex flex-column gap-0">
-                    <h5 style="font-size: 16px; color:#4E4D4D;">${listItem.name}</h5>
-                    <p style="line-height: 5px; color: #4E4D4D;">${listItem.mail}</p>
-                    <p style="line-height: 5px; color: #4E4D4D">${listItem.company}</p>
-                    <p style="line-height: 5px; color: #4E4D4D">${listItem.num}</p>
+                    <h5 style="font-size: 16px; color: #565353">${listItem.name}</h5>
+                    <p style="line-height: 5px; color: #565353">${listItem.mail}</p>
+                    <p style="line-height: 5px; color: #565353">${listItem.company}</p>
+                    <p style="line-height: 5px; color: #565353">${listItem.num}</p>
                 </div>
             </label>
             <div class="px-2 mx-3">
