@@ -104,6 +104,7 @@ $(document).ready(function () {
         $('.searchList').append(htmlContent)
     })
     // $('.searchList').hide();
+    $('.companySearchArrow').css('transform', 'rotate(180deg)')
     $(document).on('click', '.companySearchList', function() {
         $('.companyNameList').toggle();
         var $arrow = $('.companySearchArrow');
@@ -138,6 +139,7 @@ $(document).ready(function () {
         $('.cg-searchList').append(htmlContent)
     })
     // $('.searchList').hide();
+    $('.cg-companySearchArrow').css('transform', 'rotate(180deg)');
     $(document).on('click', '.cg-companySearchList', function() {
         $('.cg-companyNameList').toggle();
         var $arrow = $('.cg-companySearchArrow');
