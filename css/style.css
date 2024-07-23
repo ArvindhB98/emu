@@ -871,7 +871,7 @@ input[type="checkbox"]:checked {
 }
 
 .createGroupModalBtn :hover {
-    background-color: #225BBF;
+    background-color: #225BBF !important;
 }
 
 .applyBtn {
@@ -939,8 +939,8 @@ input[type="checkbox"]:checked {
 }
 .AddSignatories:hover{
   
-    background-color: #225BBF;
-    color: white;
+    background-color: #225BBF !important;
+    color: white !important;
     
 }
 .AddSignatories-secondary{
@@ -1119,16 +1119,34 @@ input[type="checkbox"]:checked {
     height: 48px;
     border: none;
     border-radius: 8px;
-    background-color: #225BBF;
-    color: white;
+    background-color: #225BBF !important;
+    color: white !important;
     font-family: 'Gilroy Semibold';
 }
 .AddSignsBtn:hover{
-    background-color: #225BBF;
-    color: white;
+    background-color: #225BBF !important;
+    color: white !important;
 }
 .AddSignsBtn :disabled{
     height: 100px;
+    background-color: #A7BDE5 !important;
+    border:none
+}
+.AddSignsBtn2{
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #225BBF !important;
+    color: white !important;
+    font-family: 'Gilroy Semibold';
+}
+.AddSignsBtn2:hover{
+    background-color: #225BBF !important;
+    color: white !important;
+}
+.AddSignsBtn2 :disabled{
+    height: 100px;
+    background-color: #A7BDE5 !important;
     border:none
 }
 /* ////////////////////// */
