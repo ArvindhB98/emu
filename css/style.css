@@ -22,7 +22,7 @@
 @font-face {
     font-family: Gilroy Semibold;
     src: url("../assets/fonts/Gilroy-SemiBold.ttf");
-    font-weight: normal;
+    /* font-weight: normal; */
     font-style: normal;
 }
 
@@ -1301,4 +1301,7 @@ footer {
 }
 .highlight-SearchText {
     color: #000000;
+}
+.G-sb{
+    font-family: Gilroy Semibold;
 }
